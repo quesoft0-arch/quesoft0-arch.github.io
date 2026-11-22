@@ -1,87 +1,323 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="QUE Soft - Software and Mobile Application Development">
+<meta name="theme-color" content="#071a3b">
+<meta name="description" content="QUE Soft builds useful mobile applications and digital software solutions.">
 <title>QUE Soft | Software Development</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#081426;color:#fff}
-header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;background:#0d1d34}
-.logo{font-size:25px;font-weight:bold;color:#55b5ff}
-nav a{color:white;text-decoration:none;margin-left:16px;font-size:14px}
-.hero{text-align:center;padding:100px 20px 85px;background:linear-gradient(135deg,#102e52,#081426)}
-.hero h1{font-size:48px;margin:0 0 15px}
-.hero h1 span{color:#55b5ff}
-.hero p{color:#c4d2e3;line-height:1.8}
-.btn{display:inline-block;background:#1685db;color:white;padding:13px 25px;border-radius:8px;text-decoration:none;margin-top:18px}
-section{padding:55px 7%;text-align:center}
-section h2{color:#55b5ff;font-size:28px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px}
-.card{background:#11243e;padding:25px;border-radius:14px;border:1px solid #263d5b}
-.card h3{color:#70bdff}
-.card p{color:#c4d2e3;line-height:1.7}
-footer{text-align:center;background:#0d1d34;padding:25px;color:#aebed0;font-size:13px}
-a{color:#70bdff}
-@media(max-width:600px){.hero h1{font-size:36px}header{padding:18px 5%}nav a{margin-left:8px;font-size:12px}}
+:root {
+  --navy:#071a3b;
+  --blue:#0878e8;
+  --cyan:#00c9dc;
+  --light:#f3f8ff;
+  --text:#17243b;
+}
+* {box-sizing:border-box;margin:0;padding:0}
+html {scroll-behavior:smooth}
+body {
+  font-family:Arial, sans-serif;
+  color:var(--text);
+  background:white;
+  line-height:1.7;
+}
+a {text-decoration:none;color:inherit}
+header {
+  background:rgba(7,26,59,.97);
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.nav {
+  max-width:1150px;
+  margin:auto;
+  padding:14px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:23px;
+  font-weight:800;
+}
+.brand-mark {
+  width:42px;height:42px;
+  border-radius:13px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:white;font-size:27px;font-weight:bold;
+  box-shadow:0 4px 15px #00c9dc55;
+}
+nav {display:flex;gap:22px;align-items:center}
+nav a {font-size:14px;color:#e3edff}
+nav a:hover {color:var(--cyan)}
+.lang {
+  border:1px solid #42c9ff;
+  background:transparent;color:white;
+  padding:8px 13px;border-radius:20px;
+  cursor:pointer;font-weight:bold;
+}
+.hero {
+  background:radial-gradient(circle at 80% 20%,#124b83 0,#071a3b 48%,#041126 100%);
+  color:white;
+  padding:100px 22px 95px;
+  text-align:center;
+}
+.hero-inner {max-width:850px;margin:auto}
+.hero-logo {
+  width:90px;height:90px;
+  margin:0 auto 24px;
+  border-radius:27px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,#0878e8,#00d4df);
+  font-size:58px;font-weight:900;
+  box-shadow:0 10px 35px #00c9dc55;
+}
+.hero h1 {font-size:clamp(38px,7vw,65px);line-height:1.2}
+.hero h1 span {color:#19d5ed}
+.hero h2 {
+  font-size:17px;letter-spacing:4px;
+  color:#91caff;margin:17px 0;
+}
+.hero p {color:#d5e6ff;font-size:18px;margin:18px auto 30px}
+.primary-btn {
+  display:inline-block;
+  background:linear-gradient(100deg,var(--blue),var(--cyan));
+  color:white;padding:13px 27px;
+  border-radius:28px;font-weight:bold;
+}
+section {padding:75px 22px}
+.container {max-width:1100px;margin:auto}
+.section-title {text-align:center;margin-bottom:38px}
+.section-title h2 {font-size:32px;color:var(--navy)}
+.section-title p {color:#718096;margin-top:8px}
+.about {background:var(--light);text-align:center}
+.about p {max-width:780px;margin:auto;font-size:17px}
+.services-grid,.apps-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:20px;
+}
+.service,.app {
+  background:white;
+  border:1px solid #e5edf7;
+  border-radius:18px;
+  padding:25px;
+  box-shadow:0 8px 25px #10294d0a;
+  transition:.2s;
+}
+.service:hover,.app:hover {
+  transform:translateY(-5px);
+  box-shadow:0 12px 28px #10294d18;
+}
+.service-icon,.app-icon {
+  width:54px;height:54px;
+  border-radius:15px;
+  display:grid;place-items:center;
+  background:#e9f5ff;
+  font-size:27px;margin-bottom:15px;
+}
+.service h3,.app h3 {color:var(--navy);margin-bottom:8px}
+.service p,.app p {font-size:14px;color:#66758b}
+.apps {background:var(--light)}
+.app {display:flex;flex-direction:column}
+.app .status {
+  display:inline-block;
+  margin-top:17px;
+  font-size:12px;
+  color:#0878a8;
+  background:#e7faff;
+  padding:5px 11px;
+  border-radius:20px;
+  width:max-content;
+}
+.contact {text-align:center}
+.contact-card {
+  background:var(--navy);
+  color:white;border-radius:22px;
+  padding:42px 20px;
+}
+.contact-card p {color:#cbdaf0;margin:12px 0 22px}
+.email {
+  display:inline-block;
+  color:#51d9f0;
+  font-weight:bold;
+  overflow-wrap:anywhere;
+}
+footer {
+  background:#041126;color:#aabbd2;
+  text-align:center;padding:25px 15px;font-size:13px;
+}
+footer strong {color:white}
+@media(max-width:700px) {
+  .nav {flex-wrap:wrap}
+  nav {order:3;width:100%;justify-content:center;gap:15px;flex-wrap:wrap}
+  nav a {font-size:12px}
+  .hero {padding:75px 20px}
+  section {padding:58px 18px}
+  .section-title h2 {font-size:27px}
+}
 </style>
 </head>
+
 <body>
 <header>
-<div class="logo">QUE SOFT</div>
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#apps">Our Apps</a>
-<a href="#contact">Contact</a>
-</nav>
+  <div class="nav">
+    <a class="brand" href="#home">
+      <span class="brand-mark">Q</span>
+      <span>QUE Soft</span>
+    </a>
+
+    <nav>
+      <a href="#home" data-en="Home" data-fa="خانه">Home</a>
+      <a href="#about" data-en="About" data-fa="درباره ما">About</a>
+      <a href="#services" data-en="Services" data-fa="خدمات">Services</a>
+      <a href="#apps" data-en="Our Apps" data-fa="برنامه‌ها">Our Apps</a>
+      <a href="#contact" data-en="Contact" data-fa="تماس">Contact</a>
+    </nav>
+
+    <button class="lang" id="langBtn" onclick="changeLanguage()">فارسی</button>
+  </div>
 </header>
 
-<div class="hero" id="home">
-<h1>Welcome to <span>QUE Soft</span></h1>
-<p>Software Development & Digital Solutions</p>
-<p>Building useful applications for a better digital future.</p>
-<a class="btn" href="#apps">Explore Our Apps</a>
-</div>
-
-<section id="about">
-<h2>About QUE Soft</h2>
-<p>QUE Soft is an independent software development brand founded by Qudrat Ullah Elyas.</p>
-<p>We create practical mobile applications and digital solutions.</p>
+<main>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-logo">Q</div>
+    <h1>QUE <span>Soft</span></h1>
+    <h2 data-en="SOFTWARE DEVELOPMENT" data-fa="توسعه نرم‌افزار">SOFTWARE DEVELOPMENT</h2>
+    <p data-en="Building useful applications for a better digital future."
+       data-fa="ساخت برنامه‌های کاربردی برای آینده دیجیتالی بهتر.">
+       Building useful applications for a better digital future.
+    </p>
+    <a class="primary-btn" href="#apps"
+       data-en="Explore Our Apps" data-fa="مشاهده برنامه‌ها">Explore Our Apps</a>
+  </div>
 </section>
 
-<section id="apps">
-<h2>Our Applications</h2>
-<div class="cards">
-<div class="card">
-<h3>KarPeyda</h3>
-<p>A platform designed to connect people with job opportunities in Afghanistan.</p>
-</div>
-<div class="card">
-<h3>SoodSanj</h3>
-<p>A practical tool for calculating profit and evaluating business decisions.</p>
-</div>
-<div class="card">
-<h3>HisabPro</h3>
-<p>A simple and useful application for everyday accounting and calculations.</p>
-</div>
-<div class="card">
-<h3>VoiceMusic</h3>
-<p>A voice-controlled music experience for Android devices.</p>
-</div>
-</div>
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-en="About QUE Soft" data-fa="درباره QUE Soft">About QUE Soft</h2>
+      <p data-en="Technology with purpose" data-fa="تکنولوژی با هدف مشخص">Technology with purpose</p>
+    </div>
+    <p data-en="QUE Soft is an independent software development brand founded by Qudrat Ullah Elyas. Our goal is to build useful, accessible and reliable digital products that solve real-world problems."
+       data-fa="QUE Soft یک برند مستقل توسعه نرم‌افزار است که توسط قدرت‌الله الیاس تأسیس شده است. هدف ما ساخت محصولات دیجیتالی مفید، قابل دسترس و قابل اعتماد برای حل مشکلات واقعی مردم است.">
+       QUE Soft is an independent software development brand founded by Qudrat Ullah Elyas. Our goal is to build useful, accessible and reliable digital products that solve real-world problems.
+    </p>
+  </div>
 </section>
 
-<section id="contact">
-<h2>Contact Us</h2>
-<p>Email: <a href="mailto:quesoft0@gmail.com">quesoft0@gmail.com</a></p>
+<section id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-en="What We Do" data-fa="خدمات ما">What We Do</h2>
+      <p data-en="Our focus and capabilities" data-fa="زمینه‌های فعالیت ما">Our focus and capabilities</p>
+    </div>
+    <div class="services-grid">
+      <div class="service">
+        <div class="service-icon">📱</div>
+        <h3 data-en="Mobile Apps" data-fa="اپلیکیشن موبایل">Mobile Apps</h3>
+        <p data-en="Useful Android applications designed for everyday needs."
+           data-fa="ساخت برنامه‌های کاربردی اندروید برای نیازهای روزمره.">Useful Android applications designed for everyday needs.</p>
+      </div>
+      <div class="service">
+        <div class="service-icon">💻</div>
+        <h3 data-en="Software Solutions" data-fa="راهکارهای نرم‌افزاری">Software Solutions</h3>
+        <p data-en="Practical software tools that make work easier."
+           data-fa="ابزارهای نرم‌افزاری کاربردی برای آسان‌ترکردن کارها.">Practical software tools that make work easier.</p>
+      </div>
+      <div class="service">
+        <div class="service-icon">🌐</div>
+        <h3 data-en="Digital Services" data-fa="خدمات دیجیتالی">Digital Services</h3>
+        <p data-en="Simple and accessible digital experiences."
+           data-fa="تجربه‌های دیجیتالی ساده و قابل دسترس.">Simple and accessible digital experiences.</p>
+      </div>
+    </div>
+  </div>
 </section>
+
+<section class="apps" id="apps">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-en="Our Applications" data-fa="برنامه‌های ما">Our Applications</h2>
+      <p data-en="Products by QUE Soft" data-fa="محصولات QUE Soft">Products by QUE Soft</p>
+    </div>
+    <div class="apps-grid">
+      <article class="app">
+        <div class="app-icon">💼</div>
+        <h3>KarPeyda</h3>
+        <p data-en="Connecting people with job opportunities across Afghanistan."
+           data-fa="پیوند مردم با فرصت‌های کاری در سراسر افغانستان.">Connecting people with job opportunities across Afghanistan.</p>
+        <span class="status" data-en="In Development" data-fa="در حال توسعه">In Development</span>
+      </article>
+      <article class="app">
+        <div class="app-icon">📊</div>
+        <h3>SoodSanj</h3>
+        <p data-en="A practical tool for profit calculation and business decisions."
+           data-fa="ابزاری کاربردی برای محاسبه سود و تصمیم‌گیری تجاری.">A practical tool for profit calculation and business decisions.</p>
+        <span class="status" data-en="Coming Soon" data-fa="به‌زودی">Coming Soon</span>
+      </article>
+      <article class="app">
+        <div class="app-icon">🧮</div>
+        <h3>HisabPro</h3>
+        <p data-en="Everyday accounting and calculation made simple."
+           data-fa="حسابداری و محاسبات روزمره به شیوه‌ای ساده.">Everyday accounting and calculation made simple.</p>
+        <span class="status" data-en="Coming Soon" data-fa="به‌زودی">Coming Soon</span>
+      </article>
+      <article class="app">
+        <div class="app-icon">🎵</div>
+        <h3>VoiceMusic</h3>
+        <p data-en="A voice-controlled music experience for Android devices."
+           data-fa="تجربه موسیقی با کنترل صوتی برای دستگاه‌های اندرویدی.">A voice-controlled music experience for Android devices.</p>
+        <span class="status" data-en="Coming Soon" data-fa="به‌زودی">Coming Soon</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-card">
+      <h2 data-en="Let's Connect" data-fa="با ما در ارتباط باشید">Let's Connect</h2>
+      <p data-en="Have a question or a project idea? Contact QUE Soft."
+         data-fa="پرسش یا ایده‌ای برای یک پروژه دارید؟ با QUE Soft تماس بگیرید.">Have a question or a project idea? Contact QUE Soft.</p>
+      <a class="email" href="mailto:quesoft0@gmail.com">quesoft0@gmail.com</a>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer>
-<p>© 2026 QUE Soft. All Rights Reserved.</p>
-<p>Created by Qudrat Ullah Elyas</p>
+  <strong>QUE Soft</strong>
+  <p data-en="Building a Better Digital Future"
+     data-fa="ساخت آینده دیجیتالی بهتر">Building a Better Digital Future</p>
+  <p>© 2026 QUE Soft. All Rights Reserved.</p>
 </footer>
+
+<script>
+let currentLang = "en";
+
+function changeLanguage() {
+  currentLang = currentLang === "en" ? "fa" : "en";
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "fa" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-en]").forEach(element => {
+    element.textContent = element.getAttribute("data-" + currentLang);
+  });
+
+  document.getElementById("langBtn").textContent =
+    currentLang === "en" ? "فارسی" : "English";
+}
+</script>
 </body>
 </html>
