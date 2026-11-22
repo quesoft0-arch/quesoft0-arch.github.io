@@ -353,7 +353,7 @@ section{
  color:var(--muted);
 }
 
-/* SERVICES AND APPLICATIONS */
+/* SERVICES */
 
 .services-grid,
 .apps-grid{
@@ -380,20 +380,20 @@ section{
 
 .service-icon,
 .app-icon{
- width:54px;
- height:54px;
- border-radius:15px;
+ width:58px;
+ height:58px;
+ border-radius:16px;
  display:grid;
  place-items:center;
  background:#e9f5ff;
- font-size:27px;
- margin-bottom:15px;
+ font-size:29px;
+ margin-bottom:16px;
 }
 
 .service h3,
 .app h3{
  color:var(--navy);
- margin-bottom:8px;
+ margin-bottom:9px;
  font-size:19px;
 }
 
@@ -403,6 +403,8 @@ section{
  color:var(--muted);
 }
 
+/* APPLICATIONS */
+
 .apps{
  background:var(--light);
 }
@@ -410,22 +412,98 @@ section{
 .app{
  display:flex;
  flex-direction:column;
- min-height:245px;
+ min-height:340px;
 }
 
-.app .status{
+.app-category{
  display:inline-block;
- margin-top:auto;
- padding-top:17px;
+ width:fit-content;
+ color:#0878a8;
+ background:#e7faff;
+ border-radius:20px;
+ padding:4px 11px;
+ font-size:11px;
+ font-weight:700;
+ margin-bottom:12px;
 }
 
-.status span{
+.app-description{
+ margin-bottom:15px;
+}
+
+.app-features{
+ list-style:none;
+ margin:0 0 17px;
+ padding:0;
+}
+
+.app-features li{
+ color:#43536b;
+ font-size:13px;
+ margin:5px 0;
+}
+
+.app-features li::before{
+ content:"✓";
+ color:#079bb7;
+ font-weight:bold;
+ margin-right:8px;
+}
+
+html[dir="rtl"] .app-features li::before{
+ margin-right:0;
+ margin-left:8px;
+}
+
+.app-bottom{
+ margin-top:auto;
+ padding-top:15px;
+ border-top:1px solid var(--line);
+}
+
+.app-status{
+ margin-bottom:13px;
+}
+
+.app-status span{
  display:inline-block;
  font-size:12px;
+ font-weight:700;
  color:#0878a8;
  background:#e7faff;
  padding:5px 11px;
  border-radius:20px;
+}
+
+.app-status small{
+ display:block;
+ color:var(--muted);
+ font-size:12px;
+ margin-top:6px;
+}
+
+.app-contact{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ width:100%;
+ padding:10px 14px;
+ border-radius:25px;
+ background:var(--navy);
+ color:white;
+ font-size:13px;
+ font-weight:700;
+ transition:background .2s,transform .2s;
+}
+
+.app-contact:hover{
+ background:var(--blue);
+ transform:translateY(-2px);
+}
+
+.app-contact:focus-visible{
+ outline:3px solid var(--cyan);
+ outline-offset:3px;
 }
 
 /* OUR APPROACH */
@@ -861,67 +939,241 @@ html[dir="rtl"] .skip-link{
    <h2 data-en="Our Applications" data-fa="برنامه‌های ما">
     Our Applications
    </h2>
-   <p data-en="A growing collection of products by QUE Soft"
-    data-fa="مجموعه‌ای از محصولات در حال توسعه QUE Soft">
-    A growing collection of products by QUE Soft
+
+   <p
+    data-en="Practical digital products designed to solve real problems."
+    data-fa="محصولات دیجیتالی کاربردی برای حل نیازهای واقعی.">
+    Practical digital products designed to solve real problems.
    </p>
   </div>
 
   <div class="apps-grid">
 
+   <!-- KARPEYDA -->
+
    <article class="app">
     <div class="app-icon" aria-hidden="true">💼</div>
+
+    <span class="app-category"
+     data-en="JOB & CAREER"
+     data-fa="کاریابی و اشتغال">
+     JOB & CAREER
+    </span>
+
     <h3>KarPeyda Afghanistan</h3>
-    <p data-en="A job-finding platform focused on connecting people with daily-wage and skilled work opportunities across Afghanistan."
-     data-fa="پلتفرم کاریابی با تمرکز بر پیوند مردم با فرصت‌های کار روزمزد و حرفه‌ای در سراسر افغانستان.">
-     A job-finding platform focused on connecting people with daily-wage and skilled work opportunities across Afghanistan.
+
+    <p class="app-description"
+     data-en="A job-finding platform connecting people with daily-wage and skilled work opportunities across Afghanistan."
+     data-fa="پلتفرم کاریابی برای پیوند دادن مردم با فرصت‌های کار روزمزد و حرفه‌ای در افغانستان.">
+     A job-finding platform connecting people with daily-wage and skilled work opportunities across Afghanistan.
     </p>
-    <div class="status">
-     <span data-en="In Development" data-fa="در حال توسعه">
-      In Development
-     </span>
+
+    <ul class="app-features">
+     <li data-en="Browse job opportunities"
+      data-fa="مشاهده فرصت‌های کاری">
+      Browse job opportunities
+     </li>
+     <li data-en="Post job advertisements"
+      data-fa="ثبت آگهی کاری">
+      Post job advertisements
+     </li>
+     <li data-en="Contact employers directly"
+      data-fa="تماس مستقیم با کارفرمایان">
+      Contact employers directly
+     </li>
+    </ul>
+
+    <div class="app-bottom">
+     <div class="app-status">
+      <span data-en="In Development"
+       data-fa="در حال توسعه">
+       In Development
+      </span>
+
+      <small
+       data-en="Features and online services are being developed."
+       data-fa="قابلیت‌ها و خدمات آنلاین برنامه در حال توسعه است.">
+       Features and online services are being developed.
+      </small>
+     </div>
+
+     <a class="app-contact"
+      href="mailto:quesoft0@gmail.com?subject=KarPeyda%20Afghanistan%20Inquiry"
+      data-en="Ask About KarPeyda"
+      data-fa="پرسش درباره کارپیدا">
+      Ask About KarPeyda
+     </a>
     </div>
    </article>
+
+   <!-- SOODSANJ -->
 
    <article class="app">
     <div class="app-icon" aria-hidden="true">📊</div>
+
+    <span class="app-category"
+     data-en="BUSINESS & FINANCE"
+     data-fa="کسب‌وکار و مالی">
+     BUSINESS & FINANCE
+    </span>
+
     <h3>SoodSanj</h3>
-    <p data-en="A practical tool designed to help users calculate profit, understand costs and support better business decisions."
-     data-fa="ابزاری کاربردی برای محاسبه سود، بررسی هزینه‌ها و کمک به تصمیم‌گیری بهتر در کسب‌وکار.">
-     A practical tool designed to help users calculate profit, understand costs and support better business decisions.
+
+    <p class="app-description"
+     data-en="A practical business tool designed to help users calculate profit, understand costs and make better financial decisions."
+     data-fa="ابزاری کاربردی برای محاسبه سود، بررسی هزینه‌ها و کمک به تصمیم‌گیری بهتر مالی در کسب‌وکار.">
+     A practical business tool designed to help users calculate profit, understand costs and make better financial decisions.
     </p>
-    <div class="status">
-     <span data-en="Preparing for Release" data-fa="آماده‌سازی برای انتشار">
-      Preparing for Release
-     </span>
+
+    <ul class="app-features">
+     <li data-en="Profit calculations"
+      data-fa="محاسبه سود">
+      Profit calculations
+     </li>
+     <li data-en="Cost analysis"
+      data-fa="بررسی هزینه‌ها">
+      Cost analysis
+     </li>
+     <li data-en="Business decision support"
+      data-fa="کمک به تصمیم‌گیری تجاری">
+      Business decision support
+     </li>
+    </ul>
+
+    <div class="app-bottom">
+     <div class="app-status">
+      <span data-en="Preparing for Release"
+       data-fa="در حال آماده‌سازی برای انتشار">
+       Preparing for Release
+      </span>
+
+      <small
+       data-en="The application is being prepared for its first release."
+       data-fa="برنامه برای نخستین انتشار در حال آماده‌سازی است.">
+       The application is being prepared for its first release.
+      </small>
+     </div>
+
+     <a class="app-contact"
+      href="mailto:quesoft0@gmail.com?subject=SoodSanj%20App%20Inquiry"
+      data-en="Ask About SoodSanj"
+      data-fa="پرسش درباره سودسنج">
+      Ask About SoodSanj
+     </a>
     </div>
    </article>
+
+   <!-- HISABPRO -->
 
    <article class="app">
     <div class="app-icon" aria-hidden="true">🧮</div>
+
+    <span class="app-category"
+     data-en="ACCOUNTING & MANAGEMENT"
+     data-fa="حسابداری و مدیریت">
+     ACCOUNTING & MANAGEMENT
+    </span>
+
     <h3>HisabPro</h3>
-    <p data-en="An everyday accounting and calculation application designed to make personal and small-business record keeping easier."
-     data-fa="برنامه‌ای برای حسابداری و محاسبات روزمره که ثبت و مدیریت حساب‌های شخصی و کسب‌وکارهای کوچک را آسان‌تر می‌سازد.">
-     An everyday accounting and calculation application designed to make personal and small-business record keeping easier.
+
+    <p class="app-description"
+     data-en="An accounting and calculation application designed to simplify financial records and everyday business management."
+     data-fa="برنامه حسابداری و محاسبات برای ساده‌سازی ثبت حساب‌ها و مدیریت مالی روزمره کسب‌وکارها.">
+     An accounting and calculation application designed to simplify financial records and everyday business management.
     </p>
-    <div class="status">
-     <span data-en="In Development" data-fa="در حال توسعه">
-      In Development
-     </span>
+
+    <ul class="app-features">
+     <li data-en="Everyday calculations"
+      data-fa="محاسبات روزمره">
+      Everyday calculations
+     </li>
+     <li data-en="Financial record keeping"
+      data-fa="ثبت اطلاعات مالی">
+      Financial record keeping
+     </li>
+     <li data-en="Business management tools"
+      data-fa="ابزارهای مدیریت کسب‌وکار">
+      Business management tools
+     </li>
+    </ul>
+
+    <div class="app-bottom">
+     <div class="app-status">
+      <span data-en="In Development"
+       data-fa="در حال توسعه">
+       In Development
+      </span>
+
+      <small
+       data-en="Core features and services are under development."
+       data-fa="قابلیت‌های اصلی و خدمات برنامه در حال توسعه است.">
+       Core features and services are under development.
+      </small>
+     </div>
+
+     <a class="app-contact"
+      href="mailto:quesoft0@gmail.com?subject=HisabPro%20App%20Inquiry"
+      data-en="Ask About HisabPro"
+      data-fa="پرسش درباره حساب‌پرو">
+      Ask About HisabPro
+     </a>
     </div>
    </article>
 
+   <!-- VOICEMUSIC -->
+
    <article class="app">
     <div class="app-icon" aria-hidden="true">🎵</div>
+
+    <span class="app-category"
+     data-en="MUSIC & VOICE"
+     data-fa="موسیقی و صدا">
+     MUSIC & VOICE
+    </span>
+
     <h3>VoiceMusic</h3>
-    <p data-en="An Android music player concept focused on convenient voice-based controls."
-     data-fa="ایده یک پخش‌کننده موسیقی اندرویدی با تمرکز بر کنترل آسان از طریق فرمان صوتی.">
-     An Android music player concept focused on convenient voice-based controls.
+
+    <p class="app-description"
+     data-en="A planned Android music player concept focused on convenient voice-based controls and a simple listening experience."
+     data-fa="ایده یک پخش‌کننده موسیقی اندرویدی با تمرکز بر کنترل آسان از طریق فرمان صوتی و تجربه ساده شنیدن موسیقی.">
+     A planned Android music player concept focused on convenient voice-based controls and a simple listening experience.
     </p>
-    <div class="status">
-     <span data-en="Planned" data-fa="در برنامه توسعه">
-      Planned
-     </span>
+
+    <ul class="app-features">
+     <li data-en="Music playback concept"
+      data-fa="ایده پخش موسیقی">
+      Music playback concept
+     </li>
+     <li data-en="Voice-based controls"
+      data-fa="کنترل از طریق صدا">
+      Voice-based controls
+     </li>
+     <li data-en="Simple user experience"
+      data-fa="تجربه کاربری ساده">
+      Simple user experience
+     </li>
+    </ul>
+
+    <div class="app-bottom">
+     <div class="app-status">
+      <span data-en="Planned"
+       data-fa="برنامه‌ریزی‌شده">
+       Planned
+      </span>
+
+      <small
+       data-en="This product is planned for future development."
+       data-fa="توسعه این محصول برای آینده برنامه‌ریزی شده است.">
+       This product is planned for future development.
+      </small>
+     </div>
+
+     <a class="app-contact"
+      href="mailto:quesoft0@gmail.com?subject=VoiceMusic%20App%20Inquiry"
+      data-en="Ask About VoiceMusic"
+      data-fa="پرسش درباره VoiceMusic">
+      Ask About VoiceMusic
+     </a>
     </div>
    </article>
 
