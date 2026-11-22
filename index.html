@@ -19,7 +19,7 @@
 * {box-sizing:border-box;margin:0;padding:0}
 html {scroll-behavior:smooth}
 body {
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
   color:var(--text);
   background:white;
   line-height:1.7;
@@ -48,22 +48,25 @@ header {
   font-size:23px;
   font-weight:800;
 }
-.brand-mark {
-  width:42px;height:42px;
-  border-radius:13px;
-  display:grid;place-items:center;
-  background:linear-gradient(135deg,var(--blue),var(--cyan));
-  color:white;font-size:27px;font-weight:bold;
-  box-shadow:0 4px 15px #00c9dc55;
+.brand-logo {
+  width:43px;
+  height:43px;
+  border-radius:12px;
+  object-fit:contain;
+  background:white;
+  padding:2px;
 }
 nav {display:flex;gap:22px;align-items:center}
 nav a {font-size:14px;color:#e3edff}
 nav a:hover {color:var(--cyan)}
 .lang {
   border:1px solid #42c9ff;
-  background:transparent;color:white;
-  padding:8px 13px;border-radius:20px;
-  cursor:pointer;font-weight:bold;
+  background:transparent;
+  color:white;
+  padding:8px 13px;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:bold;
 }
 .hero {
   background:radial-gradient(circle at 80% 20%,#124b83 0,#071a3b 48%,#041126 100%);
@@ -82,18 +85,23 @@ nav a:hover {color:var(--cyan)}
   background:white;
   padding:5px;
   box-shadow:0 10px 35px #00c9dc55;
-}.hero h1 {font-size:clamp(38px,7vw,65px);line-height:1.2}
+}
+.hero h1 {font-size:clamp(38px,7vw,65px);line-height:1.2}
 .hero h1 span {color:#19d5ed}
 .hero h2 {
-  font-size:17px;letter-spacing:4px;
-  color:#91caff;margin:17px 0;
+  font-size:17px;
+  letter-spacing:4px;
+  color:#91caff;
+  margin:17px 0;
 }
 .hero p {color:#d5e6ff;font-size:18px;margin:18px auto 30px}
 .primary-btn {
   display:inline-block;
   background:linear-gradient(100deg,var(--blue),var(--cyan));
-  color:white;padding:13px 27px;
-  border-radius:28px;font-weight:bold;
+  color:white;
+  padding:13px 27px;
+  border-radius:28px;
+  font-weight:bold;
 }
 section {padding:75px 22px}
 .container {max-width:1100px;margin:auto}
@@ -120,11 +128,14 @@ section {padding:75px 22px}
   box-shadow:0 12px 28px #10294d18;
 }
 .service-icon,.app-icon {
-  width:54px;height:54px;
+  width:54px;
+  height:54px;
   border-radius:15px;
-  display:grid;place-items:center;
+  display:grid;
+  place-items:center;
   background:#e9f5ff;
-  font-size:27px;margin-bottom:15px;
+  font-size:27px;
+  margin-bottom:15px;
 }
 .service h3,.app h3 {color:var(--navy);margin-bottom:8px}
 .service p,.app p {font-size:14px;color:#66758b}
@@ -143,7 +154,8 @@ section {padding:75px 22px}
 .contact {text-align:center}
 .contact-card {
   background:var(--navy);
-  color:white;border-radius:22px;
+  color:white;
+  border-radius:22px;
   padding:42px 20px;
 }
 .contact-card p {color:#cbdaf0;margin:12px 0 22px}
@@ -154,15 +166,25 @@ section {padding:75px 22px}
   overflow-wrap:anywhere;
 }
 footer {
-  background:#041126;color:#aabbd2;
-  text-align:center;padding:25px 15px;font-size:13px;
+  background:#041126;
+  color:#aabbd2;
+  text-align:center;
+  padding:25px 15px;
+  font-size:13px;
 }
 footer strong {color:white}
 @media(max-width:700px) {
   .nav {flex-wrap:wrap}
-  nav {order:3;width:100%;justify-content:center;gap:15px;flex-wrap:wrap}
+  nav {
+    order:3;
+    width:100%;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+  }
   nav a {font-size:12px}
   .hero {padding:75px 20px}
+  .hero-logo {width:140px;height:140px}
   section {padding:58px 18px}
   .section-title h2 {font-size:27px}
 }
@@ -173,7 +195,9 @@ footer strong {color:white}
 <header>
   <div class="nav">
     <a class="brand" href="#home">
-      <span class="brand-mark">Q</span>
+      <img class="brand-logo"
+           src="file_000000000bb08210a41546814065a269.png"
+           alt="QUE Soft">
       <span>QUE Soft</span>
     </a>
 
@@ -192,13 +216,19 @@ footer strong {color:white}
 <main>
 <section class="hero" id="home">
   <div class="hero-inner">
-    <img class="hero-logo" src="que-soft-logo.png" alt="QUE Soft Logo">
+    <img class="hero-logo"
+         src="file_000000000bb08210a41546814065a269.png"
+         alt="QUE Soft Logo">
+
     <h1>QUE <span>Soft</span></h1>
+
     <h2 data-en="SOFTWARE DEVELOPMENT" data-fa="توسعه نرم‌افزار">SOFTWARE DEVELOPMENT</h2>
+
     <p data-en="Building useful applications for a better digital future."
        data-fa="ساخت برنامه‌های کاربردی برای آینده دیجیتالی بهتر.">
        Building useful applications for a better digital future.
     </p>
+
     <a class="primary-btn" href="#apps"
        data-en="Explore Our Apps" data-fa="مشاهده برنامه‌ها">Explore Our Apps</a>
   </div>
@@ -223,6 +253,7 @@ footer strong {color:white}
       <h2 data-en="What We Do" data-fa="خدمات ما">What We Do</h2>
       <p data-en="Our focus and capabilities" data-fa="زمینه‌های فعالیت ما">Our focus and capabilities</p>
     </div>
+
     <div class="services-grid">
       <div class="service">
         <div class="service-icon">📱</div>
@@ -230,12 +261,14 @@ footer strong {color:white}
         <p data-en="Useful Android applications designed for everyday needs."
            data-fa="ساخت برنامه‌های کاربردی اندروید برای نیازهای روزمره.">Useful Android applications designed for everyday needs.</p>
       </div>
+
       <div class="service">
         <div class="service-icon">💻</div>
         <h3 data-en="Software Solutions" data-fa="راهکارهای نرم‌افزاری">Software Solutions</h3>
         <p data-en="Practical software tools that make work easier."
            data-fa="ابزارهای نرم‌افزاری کاربردی برای آسان‌ترکردن کارها.">Practical software tools that make work easier.</p>
       </div>
+
       <div class="service">
         <div class="service-icon">🌐</div>
         <h3 data-en="Digital Services" data-fa="خدمات دیجیتالی">Digital Services</h3>
@@ -252,6 +285,7 @@ footer strong {color:white}
       <h2 data-en="Our Applications" data-fa="برنامه‌های ما">Our Applications</h2>
       <p data-en="Products by QUE Soft" data-fa="محصولات QUE Soft">Products by QUE Soft</p>
     </div>
+
     <div class="apps-grid">
       <article class="app">
         <div class="app-icon">💼</div>
@@ -260,6 +294,7 @@ footer strong {color:white}
            data-fa="پیوند مردم با فرصت‌های کاری در سراسر افغانستان.">Connecting people with job opportunities across Afghanistan.</p>
         <span class="status" data-en="In Development" data-fa="در حال توسعه">In Development</span>
       </article>
+
       <article class="app">
         <div class="app-icon">📊</div>
         <h3>SoodSanj</h3>
@@ -267,6 +302,7 @@ footer strong {color:white}
            data-fa="ابزاری کاربردی برای محاسبه سود و تصمیم‌گیری تجاری.">A practical tool for profit calculation and business decisions.</p>
         <span class="status" data-en="Coming Soon" data-fa="به‌زودی">Coming Soon</span>
       </article>
+
       <article class="app">
         <div class="app-icon">🧮</div>
         <h3>HisabPro</h3>
@@ -274,6 +310,7 @@ footer strong {color:white}
            data-fa="حسابداری و محاسبات روزمره به شیوه‌ای ساده.">Everyday accounting and calculation made simple.</p>
         <span class="status" data-en="Coming Soon" data-fa="به‌زودی">Coming Soon</span>
       </article>
+
       <article class="app">
         <div class="app-icon">🎵</div>
         <h3>VoiceMusic</h3>
