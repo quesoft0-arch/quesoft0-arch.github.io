@@ -73,15 +73,16 @@ nav a:hover {color:var(--cyan)}
 }
 .hero-inner {max-width:850px;margin:auto}
 .hero-logo {
-  width:90px;height:90px;
+  width:160px;
+  height:160px;
   margin:0 auto 24px;
-  border-radius:27px;
-  display:grid;place-items:center;
-  background:linear-gradient(135deg,#0878e8,#00d4df);
-  font-size:58px;font-weight:900;
+  border-radius:25px;
+  display:block;
+  object-fit:contain;
+  background:white;
+  padding:5px;
   box-shadow:0 10px 35px #00c9dc55;
-}
-.hero h1 {font-size:clamp(38px,7vw,65px);line-height:1.2}
+}.hero h1 {font-size:clamp(38px,7vw,65px);line-height:1.2}
 .hero h1 span {color:#19d5ed}
 .hero h2 {
   font-size:17px;letter-spacing:4px;
@@ -191,7 +192,7 @@ footer strong {color:white}
 <main>
 <section class="hero" id="home">
   <div class="hero-inner">
-    <div class="hero-logo">Q</div>
+    <img class="hero-logo" src="que-soft-logo.png" alt="QUE Soft Logo">
     <h1>QUE <span>Soft</span></h1>
     <h2 data-en="SOFTWARE DEVELOPMENT" data-fa="توسعه نرم‌افزار">SOFTWARE DEVELOPMENT</h2>
     <p data-en="Building useful applications for a better digital future."
