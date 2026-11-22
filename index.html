@@ -13,7 +13,10 @@
 <meta property="og:description" content="Building useful applications for a better digital future.">
 <meta property="og:url" content="https://quesoft0-arch.github.io/">
 <meta property="og:image" content="https://quesoft0-arch.github.io/file_000000000bb08210a41546814065a269.png">
+
+<link rel="preload" as="image" href="file_000000000bb08210a41546814065a269.png">
 <link rel="icon" type="image/png" href="file_000000000bb08210a41546814065a269.png">
+
 <title>QUE Soft | Software Development</title>
 
 <style>
@@ -222,7 +225,12 @@ footer p{margin-top:4px}
 
 <section class="hero" id="home">
  <div class="hero-inner">
-  <img class="hero-logo" src="file_000000000bb08210a41546814065a269.png" alt="QUE Soft logo">
+  <img class="hero-logo"
+       src="file_000000000bb08210a41546814065a269.png"
+       alt="QUE Soft logo"
+       loading="eager"
+       fetchpriority="high"
+       decoding="sync">
 
   <span class="eyebrow" data-en="INDEPENDENT SOFTWARE BRAND" data-fa="برند مستقل توسعه نرم‌افزار">INDEPENDENT SOFTWARE BRAND</span>
 
