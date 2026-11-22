@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://quesoft0-arch.github.io/sitemap.xml
