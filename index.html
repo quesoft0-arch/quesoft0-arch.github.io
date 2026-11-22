@@ -4,16 +4,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#071a3b">
-
+<meta name="theme-color" content="#07162f">
 <meta name="google-site-verification" content="qijEtS7QEOOZ6FDQXuBxvQFp7U2f9JpR3kY-FkihuhE">
 
-<title>QUE Soft | HisabPro Android App & Software Development</title>
+<title>QUE Soft | Software Development & HisabPro</title>
 
-<meta name="description" content="QUE Soft is an independent software development brand creating practical Android applications and digital solutions. Discover HisabPro, an Android accounting and business management application, and download version 1.7.0.">
-
-<meta name="keywords" content="QUE Soft, QUE Soft Afghanistan, software development, Android apps, Android applications, mobile app development, HisabPro, HisabPro Android app, accounting application">
-
+<meta name="description" content="QUE Soft is an independent software development brand creating practical Android applications and digital solutions. Discover HisabPro version 1.7.0.">
+<meta name="keywords" content="QUE Soft, software development, Android apps, HisabPro, Android accounting app, mobile applications">
 <meta name="author" content="QUE Soft">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="googlebot" content="index, follow">
@@ -22,22 +19,22 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="QUE Soft">
-<meta property="og:title" content="QUE Soft | HisabPro Android App">
-<meta property="og:description" content="Discover HisabPro, an Android accounting and business management application by QUE Soft. Download version 1.7.0.">
+<meta property="og:title" content="QUE Soft | Software Development">
+<meta property="og:description" content="Building useful digital products and practical Android applications.">
 <meta property="og:url" content="https://quesoft0-arch.github.io/">
 <meta property="og:image" content="https://quesoft0-arch.github.io/quesoft-horizontal.png">
-<meta property="og:image:alt" content="QUE Soft - Software Development">
+<meta property="og:image:alt" content="QUE Soft">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="fa_AF">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="QUE Soft | HisabPro Android App">
-<meta name="twitter:description" content="Discover HisabPro, an Android accounting and business management application by QUE Soft.">
+<meta name="twitter:title" content="QUE Soft | Software Development">
+<meta name="twitter:description" content="Building useful digital products and practical Android applications.">
 <meta name="twitter:image" content="https://quesoft0-arch.github.io/quesoft-horizontal.png">
 
 <link rel="icon" type="image/png" href="https://quesoft0-arch.github.io/quesoft-icon.png">
 <link rel="apple-touch-icon" href="https://quesoft0-arch.github.io/quesoft-icon.png">
-<link rel="preload" as="image" href="https://quesoft0-arch.github.io/quesoft-horizontal.png">
+<link rel="preload" as="image" href="quesoft-horizontal.png">
 
 <script type="application/ld+json">
 {
@@ -48,11 +45,8 @@
       "@id": "https://quesoft0-arch.github.io/#organization",
       "name": "QUE Soft",
       "url": "https://quesoft0-arch.github.io/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://quesoft0-arch.github.io/quesoft-icon.png"
-      },
-      "description": "QUE Soft is an independent software development brand creating practical Android applications and digital solutions."
+      "logo": "https://quesoft0-arch.github.io/quesoft-icon.png",
+      "description": "Independent software development brand creating practical Android applications and digital solutions."
     },
     {
       "@type": "WebSite",
@@ -63,6 +57,18 @@
         "@id": "https://quesoft0-arch.github.io/#organization"
       },
       "inLanguage": ["en", "fa"]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "HisabPro",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Android",
+      "softwareVersion": "1.7.0",
+      "url": "https://github.com/qudratelyas4-hue/HisabPro-Releases/releases/tag/v1.7.0",
+      "downloadUrl": "https://github.com/qudratelyas4-hue/HisabPro-Releases/releases/download/v1.7.0/HisabPro-release.apk",
+      "publisher": {
+        "@id": "https://quesoft0-arch.github.io/#organization"
+      }
     }
   ]
 }
@@ -70,350 +76,1110 @@
 
 <style>
 :root{
- --navy:#071a3b;
- --navy2:#0d2d58;
- --blue:#0878e8;
- --cyan:#00c9dc;
- --light:#f3f8ff;
- --white:#ffffff;
- --text:#17243b;
- --muted:#66758b;
- --line:#e2eaf5;
- --shadow:0 10px 30px rgba(7,26,59,.08);
+  --navy:#07162f;
+  --navy2:#0b2345;
+  --navy3:#102f59;
+  --blue:#0878e8;
+  --cyan:#18d4e8;
+  --cyan2:#7cecff;
+  --white:#ffffff;
+  --light:#f4f8fd;
+  --text:#17253b;
+  --muted:#66758b;
+  --line:#e4ebf4;
+  --shadow:0 15px 45px rgba(7,22,47,.09);
+  --radius:20px;
+  --max:1160px;
 }
 
-*{box-sizing:border-box;margin:0;padding:0;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-html{scroll-behavior:smooth;scroll-padding-top:90px;}
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
 
 body{
- font-family:Arial,"Noto Sans",sans-serif;
- color:var(--text);
- background:var(--white);
- line-height:1.75;
+  font-family:Arial,"Noto Sans",sans-serif;
+  background:#fff;
+  color:var(--text);
+  line-height:1.75;
+  overflow-x:hidden;
 }
 
-a{color:inherit;text-decoration:none;}
-button{font:inherit;}
-img{max-width:100%;}
+a{
+  color:inherit;
+  text-decoration:none;
+}
 
-.container{width:100%;max-width:1100px;margin:auto;}
+button{
+  font:inherit;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+.container{
+  width:min(var(--max),calc(100% - 44px));
+  margin:auto;
+}
+
+section{
+  padding:100px 0;
+}
+
+:focus-visible{
+  outline:3px solid var(--cyan);
+  outline-offset:4px;
+}
 
 .skip-link{
- position:absolute;top:-60px;left:12px;z-index:100;
- padding:10px 16px;color:var(--navy);
- background:white;border-radius:8px;
+  position:absolute;
+  top:-60px;
+  left:15px;
+  z-index:999;
+  background:white;
+  color:var(--navy);
+  padding:10px 16px;
+  border-radius:8px;
 }
-.skip-link:focus{top:12px;}
 
-:focus-visible{outline:3px solid var(--cyan);outline-offset:4px;}
+.skip-link:focus{
+  top:12px;
+}
 
 /* HEADER */
 
 header{
- position:sticky;top:0;z-index:50;
- background:rgba(7,26,59,.98);color:white;
- box-shadow:0 4px 20px rgba(4,17,38,.15);
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(7,22,47,.96);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .nav{
- max-width:1160px;margin:auto;padding:12px 22px;
- display:flex;align-items:center;justify-content:space-between;gap:18px;
+  max-width:1200px;
+  min-height:76px;
+  margin:auto;
+  padding:10px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
 }
 
 .brand{
- display:flex;align-items:center;gap:10px;
- font-size:22px;font-weight:800;white-space:nowrap;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  color:white;
+  font-size:22px;
+  font-weight:800;
+  white-space:nowrap;
 }
 
 .brand-logo{
- width:43px;height:43px;border-radius:12px;
- object-fit:contain;background:white;padding:2px;
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  object-fit:contain;
+  background:white;
+  padding:2px;
 }
 
-nav{display:flex;align-items:center;justify-content:center;gap:20px;}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
 
-nav a{color:#e3edff;font-size:14px;transition:color .2s;}
-nav a:hover{color:var(--cyan);}
+.nav-links a{
+  color:#d8e5f7;
+  font-size:13px;
+  font-weight:600;
+  transition:color .2s;
+}
+
+.nav-links a:hover{
+  color:var(--cyan);
+}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
 
 .lang{
- border:1px solid #42c9ff;background:transparent;color:white;
- padding:8px 15px;border-radius:25px;cursor:pointer;
- font-weight:700;white-space:nowrap;
+  border:1px solid #3eabc8;
+  background:transparent;
+  color:white;
+  padding:8px 15px;
+  border-radius:30px;
+  cursor:pointer;
+  font-size:13px;
+  font-weight:700;
 }
-.lang:hover{background:#ffffff12;}
+
+.lang:hover{
+  background:#ffffff12;
+}
+
+.menu-toggle{
+  display:none;
+  width:42px;
+  height:42px;
+  border:1px solid #ffffff30;
+  border-radius:11px;
+  color:white;
+  background:transparent;
+  cursor:pointer;
+  font-size:22px;
+}
 
 /* HERO */
 
 .hero{
- position:relative;overflow:hidden;text-align:center;color:white;
- padding:70px 22px 96px;
- background:radial-gradient(circle at 82% 18%,#14558e 0,#0b2a53 32%,#071a3b 66%,#041126 100%);
+  position:relative;
+  overflow:hidden;
+  color:white;
+  background:
+    radial-gradient(ellipse at 80% 20%,#14518b 0%,transparent 42%),
+    radial-gradient(ellipse at 5% 90%,#073c68 0%,transparent 38%),
+    linear-gradient(130deg,#06152d,#0a2548 55%,#06152d);
+  padding:95px 22px 110px;
 }
 
-.hero:before,.hero:after{
- content:"";position:absolute;border:1px solid #7bdfff20;
- border-radius:50%;pointer-events:none;
+.hero:before,
+.hero:after{
+  content:"";
+  position:absolute;
+  border:1px solid #83dfff18;
+  border-radius:50%;
+  pointer-events:none;
 }
 
-.hero:before{width:390px;height:390px;top:-220px;right:-90px;}
-.hero:after{width:300px;height:300px;bottom:-210px;left:-80px;}
+.hero:before{
+  width:520px;
+  height:520px;
+  right:-220px;
+  top:-290px;
+}
 
-.hero-inner{max-width:880px;margin:auto;position:relative;z-index:1;}
+.hero:after{
+  width:380px;
+  height:380px;
+  left:-190px;
+  bottom:-240px;
+}
+
+.hero-inner{
+  max-width:940px;
+  margin:auto;
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
 
 .hero-logo{
- width:100%;max-width:680px;height:auto;margin:0 auto 28px;
- display:block;object-fit:contain;border-radius:14px;
- background:white;box-shadow:0 10px 35px #00c9dc33;
+  width:min(100%,650px);
+  max-height:210px;
+  object-fit:contain;
+  margin:0 auto 32px;
+  border-radius:15px;
+  background:white;
+  box-shadow:0 15px 50px #00c9dc20;
 }
 
 .eyebrow{
- display:inline-block;color:#a8e9ff;background:#ffffff12;
- border:1px solid #8edfff44;border-radius:30px;
- padding:5px 14px;font-size:12px;letter-spacing:1.5px;font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:#a8edff;
+  background:#ffffff0d;
+  border:1px solid #7be5ff42;
+  border-radius:40px;
+  padding:7px 16px;
+  font-size:11px;
+  letter-spacing:1.7px;
+  font-weight:800;
 }
 
-.hero h1{font-size:clamp(42px,7vw,68px);line-height:1.16;margin-top:15px;}
-.hero h1 span{color:#19d5ed;}
+.eyebrow:before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--cyan);
+  box-shadow:0 0 12px var(--cyan);
+}
 
-.hero h2{font-size:15px;letter-spacing:3px;color:#91caff;margin:17px 0;}
+.hero h1{
+  font-size:clamp(48px,8vw,82px);
+  line-height:1.12;
+  margin-top:23px;
+  letter-spacing:-2px;
+}
 
-.hero p{
- color:#d5e6ff;font-size:18px;max-width:700px;margin:18px auto 30px;
+.hero h1 span{
+  color:var(--cyan);
+}
+
+.hero-subtitle{
+  color:#a9d4ff;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:4px;
+  margin-top:16px;
+}
+
+.hero-description{
+  max-width:710px;
+  margin:22px auto 32px;
+  color:#d3e1f3;
+  font-size:17px;
+  line-height:1.9;
 }
 
 .actions{
- display:flex;justify-content:center;align-items:center;
- gap:12px;flex-wrap:wrap;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:13px;
 }
 
-.primary-btn,.secondary-btn{
- display:inline-flex;align-items:center;justify-content:center;
- padding:12px 25px;border-radius:28px;font-weight:700;
- transition:transform .2s,box-shadow .2s;
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:9px;
+  min-height:48px;
+  padding:12px 25px;
+  border-radius:30px;
+  font-weight:700;
+  font-size:14px;
+  transition:transform .2s,box-shadow .2s,background .2s;
 }
 
-.primary-btn{
- background:linear-gradient(100deg,var(--blue),var(--cyan));
- color:white;box-shadow:0 8px 22px #00b8dc33;
+.btn:hover{
+  transform:translateY(-3px);
 }
 
-.secondary-btn{border:1px solid #b7ddff88;color:white;background:#ffffff0d;}
+.btn-primary{
+  color:white;
+  background:linear-gradient(105deg,#0878e8,#08bed5);
+  box-shadow:0 9px 28px #00a8dc38;
+}
 
-.primary-btn:hover,.secondary-btn:hover{transform:translateY(-2px);}
+.btn-secondary{
+  color:white;
+  border:1px solid #b6d8f77a;
+  background:#ffffff0c;
+}
 
-/* GENERAL SECTIONS */
+.btn-secondary:hover{
+  background:#ffffff18;
+}
 
-section{padding:76px 22px;}
+/* TRUST STRIP */
 
-.section-title{text-align:center;margin-bottom:38px;}
-.section-title h2{font-size:clamp(27px,4vw,34px);line-height:1.3;color:var(--navy);}
-.section-title p{color:var(--muted);margin-top:8px;}
+.trust-strip{
+  position:relative;
+  z-index:5;
+  margin-top:-34px;
+}
+
+.trust-inner{
+  max-width:940px;
+  margin:auto;
+  padding:24px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:var(--shadow);
+}
+
+.trust-item{
+  text-align:center;
+  padding:4px 10px;
+}
+
+.trust-item strong{
+  display:block;
+  color:var(--navy);
+  font-size:15px;
+}
+
+.trust-item span{
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* SECTION TITLES */
+
+.section-heading{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 48px;
+}
+
+.section-label{
+  color:#078eac;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.section-heading h2{
+  color:var(--navy);
+  font-size:clamp(29px,4vw,40px);
+  line-height:1.3;
+  margin-top:9px;
+}
+
+.section-heading p{
+  color:var(--muted);
+  font-size:15px;
+  margin-top:12px;
+}
 
 /* ABOUT */
 
-.about{background:var(--light);text-align:center;}
-
-.about-copy{max-width:820px;margin:auto;font-size:17px;color:#43536b;}
-
-.values{
- display:grid;grid-template-columns:repeat(3,1fr);
- gap:16px;margin-top:34px;text-align:start;
+.about{
+  padding-top:115px;
+  background:white;
 }
 
-.value{padding:20px;border-radius:15px;background:white;border:1px solid var(--line);}
-.value strong{display:block;color:var(--navy);margin-bottom:5px;}
-.value p{font-size:14px;color:var(--muted);}
+.about-layout{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:65px;
+  align-items:center;
+}
+
+.about-text .section-label{
+  display:block;
+  margin-bottom:8px;
+}
+
+.about-text h2{
+  color:var(--navy);
+  font-size:clamp(30px,4vw,43px);
+  line-height:1.3;
+  margin-bottom:20px;
+}
+
+.about-text p{
+  color:#627187;
+  font-size:15px;
+  margin-bottom:15px;
+}
+
+.about-panel{
+  position:relative;
+  padding:32px;
+  background:linear-gradient(145deg,#071a38,#103b69);
+  border-radius:24px;
+  color:white;
+  overflow:hidden;
+  box-shadow:0 18px 45px #071a3825;
+}
+
+.about-panel:after{
+  content:"Q";
+  position:absolute;
+  right:-10px;
+  bottom:-95px;
+  font-size:280px;
+  line-height:1;
+  font-weight:900;
+  color:#ffffff08;
+  pointer-events:none;
+}
+
+.about-panel h3{
+  position:relative;
+  z-index:1;
+  font-size:23px;
+  margin-bottom:20px;
+}
+
+.value-row{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:flex-start;
+  gap:13px;
+  padding:14px 0;
+  border-bottom:1px solid #ffffff18;
+}
+
+.value-row:last-child{
+  border:0;
+}
+
+.value-icon{
+  flex:none;
+  width:38px;
+  height:38px;
+  display:grid;
+  place-items:center;
+  border-radius:11px;
+  color:var(--cyan);
+  background:#ffffff12;
+  font-size:18px;
+}
+
+.value-row strong{
+  display:block;
+  font-size:14px;
+}
+
+.value-row p{
+  color:#b8cbe1;
+  font-size:12px;
+  margin-top:3px;
+}
 
 /* SERVICES */
 
-.services-grid,.apps-grid{
- display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;
+.services{
+  background:var(--light);
 }
 
-.service,.app{
- background:white;border:1px solid var(--line);border-radius:18px;
- padding:25px;box-shadow:0 8px 25px rgba(16,41,77,.04);
- transition:transform .2s,box-shadow .2s;
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
-.service:hover,.app:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
-
-.service-icon,.app-icon{
- width:58px;height:58px;border-radius:16px;
- display:grid;place-items:center;background:#e9f5ff;
- font-size:29px;margin-bottom:16px;
+.service-card{
+  padding:30px 25px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:20px;
+  transition:transform .25s,box-shadow .25s;
 }
 
-.service h3,.app h3{color:var(--navy);margin-bottom:9px;font-size:19px;}
-.service p,.app p{font-size:14px;color:var(--muted);}
-
-/* APPLICATIONS */
-
-.apps{background:var(--light);}
-
-.app{display:flex;flex-direction:column;min-height:340px;}
-
-.app-category{
- display:inline-block;width:fit-content;color:#0878a8;background:#e7faff;
- border-radius:20px;padding:4px 11px;font-size:11px;
- font-weight:700;margin-bottom:12px;
+.service-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
 }
 
-.app-description{margin-bottom:15px;}
-
-.app-features{list-style:none;margin:0 0 17px;padding:0;}
-.app-features li{color:#43536b;font-size:13px;margin:5px 0;}
-
-.app-features li::before{
- content:"✓";color:#079bb7;font-weight:bold;margin-right:8px;
+.service-icon{
+  width:57px;
+  height:57px;
+  display:grid;
+  place-items:center;
+  border-radius:16px;
+  background:linear-gradient(145deg,#e6f6ff,#e8fbff);
+  color:#087ab4;
+  font-size:25px;
+  margin-bottom:20px;
 }
 
-html[dir="rtl"] .app-features li::before{margin-right:0;margin-left:8px;}
-
-.app-bottom{margin-top:auto;padding-top:15px;border-top:1px solid var(--line);}
-.app-status{margin-bottom:13px;}
-
-.app-status span{
- display:inline-block;font-size:12px;font-weight:700;color:#0878a8;
- background:#e7faff;padding:5px 11px;border-radius:20px;
+.service-card h3{
+  color:var(--navy);
+  font-size:18px;
+  margin-bottom:9px;
 }
 
-.app-status small{display:block;color:var(--muted);font-size:12px;margin-top:6px;}
-
-.app-contact{
- display:inline-flex;align-items:center;justify-content:center;
- width:100%;padding:10px 14px;border-radius:25px;
- background:var(--navy);color:white;font-size:13px;font-weight:700;
- transition:background .2s,transform .2s;
+.service-card p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.9;
 }
 
-.app-contact:hover{background:var(--blue);transform:translateY(-2px);}
-.app-contact:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;}
+/* APPLICATION */
 
-/* OUR APPROACH */
+.apps{
+  background:white;
+}
 
-.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.app-feature{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  overflow:hidden;
+  border-radius:25px;
+  border:1px solid var(--line);
+  box-shadow:0 18px 55px #071a3810;
+}
 
-.process{border-left:3px solid var(--cyan);padding:6px 18px;}
-.process b{display:block;color:var(--navy);font-size:17px;margin-bottom:5px;}
-.process p{font-size:14px;color:var(--muted);}
+.app-visual{
+  position:relative;
+  min-height:340px;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(circle at 50% 40%,#1a568e,transparent 55%),
+    linear-gradient(145deg,#07162f,#103c6b);
+  overflow:hidden;
+}
+
+.app-visual:before,
+.app-visual:after{
+  content:"";
+  position:absolute;
+  border:1px solid #ffffff19;
+  border-radius:50%;
+}
+
+.app-visual:before{
+  width:300px;
+  height:300px;
+}
+
+.app-visual:after{
+  width:220px;
+  height:220px;
+}
+
+.app-symbol{
+  position:relative;
+  z-index:1;
+  width:130px;
+  height:130px;
+  display:grid;
+  place-items:center;
+  border-radius:32px;
+  color:white;
+  font-size:65px;
+  background:linear-gradient(145deg,#0d9ee5,#12d0df);
+  box-shadow:0 20px 45px #0005;
+  border:1px solid #ffffff65;
+}
+
+.app-content{
+  padding:38px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.app-tag{
+  width:fit-content;
+  display:inline-flex;
+  color:#087d9c;
+  background:#e8faff;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1px;
+  margin-bottom:13px;
+}
+
+.app-content h3{
+  color:var(--navy);
+  font-size:34px;
+  line-height:1.2;
+}
+
+.app-version{
+  color:#078cab;
+  font-size:12px;
+  font-weight:700;
+  margin-top:8px;
+}
+
+.app-description{
+  color:var(--muted);
+  font-size:14px;
+  margin:17px 0;
+}
+
+.app-features{
+  list-style:none;
+  margin:0 0 22px;
+}
+
+.app-features li{
+  color:#40516a;
+  font-size:13px;
+  margin:7px 0;
+}
+
+.app-features li:before{
+  content:"✓";
+  color:#079fb8;
+  font-weight:900;
+  margin-right:9px;
+}
+
+.app-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.app-buttons .btn{
+  font-size:12px;
+  padding:11px 18px;
+}
+
+.app-download{
+  color:white;
+  background:var(--navy);
+}
+
+.app-release{
+  color:#0878c5;
+  background:#eaf5ff;
+}
+
+/* PROCESS */
+
+.approach{
+  background:var(--light);
+}
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.process-card{
+  position:relative;
+  padding:28px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+}
+
+.process-number{
+  display:inline-block;
+  color:#0b9db8;
+  font-size:28px;
+  font-weight:900;
+  margin-bottom:15px;
+}
+
+.process-card h3{
+  color:var(--navy);
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+.process-card p{
+  color:var(--muted);
+  font-size:13px;
+}
 
 /* CONTACT */
 
-.contact{text-align:center;}
-
-.contact-card{
- background:linear-gradient(125deg,var(--navy),#0d3767);
- color:white;border-radius:24px;padding:48px 22px;
- box-shadow:0 15px 40px #071a3b22;
+.contact{
+  background:white;
 }
 
-.contact-card h2{font-size:30px;}
-.contact-card p{color:#cbdaf0;margin:12px 0 22px;}
-
-.email{
- display:inline-block;color:#51d9f0;font-weight:700;font-size:18px;
- overflow-wrap:anywhere;border-bottom:1px solid #51d9f0;padding-bottom:3px;
+.contact-box{
+  position:relative;
+  overflow:hidden;
+  padding:65px 25px;
+  border-radius:26px;
+  text-align:center;
+  color:white;
+  background:
+    radial-gradient(circle at 90% 0%,#14568a,transparent 45%),
+    linear-gradient(120deg,#07162f,#0c315a);
 }
 
-.contact-note{font-size:13px!important;color:#a9bedb!important;margin-top:18px!important;}
+.contact-box:before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  left:-170px;
+  bottom:-210px;
+  border:1px solid #ffffff20;
+  border-radius:50%;
+}
+
+.contact-box h2{
+  position:relative;
+  font-size:clamp(28px,4vw,38px);
+}
+
+.contact-box p{
+  position:relative;
+  max-width:600px;
+  margin:12px auto 25px;
+  color:#c6d8eb;
+  font-size:14px;
+}
+
+.contact-email{
+  position:relative;
+  display:inline-block;
+  color:var(--cyan2);
+  font-size:20px;
+  font-weight:800;
+  overflow-wrap:anywhere;
+  border-bottom:1px solid #7cecff70;
+  padding-bottom:4px;
+}
+
+.contact-caption{
+  position:relative;
+  color:#9db5d0!important;
+  font-size:11px!important;
+  margin-top:18px!important;
+}
 
 /* FOOTER */
 
 footer{
- background:#041126;color:#aabbd2;text-align:center;
- padding:27px 15px;font-size:13px;
+  background:#041126;
+  color:#aabbd2;
+  padding:38px 20px 22px;
+  text-align:center;
 }
 
-footer strong{color:white;font-size:16px;}
-footer p{margin-top:4px;}
+.footer-brand{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  color:white;
+  font-size:21px;
+  font-weight:800;
+}
+
+.footer-brand img{
+  width:35px;
+  height:35px;
+  border-radius:9px;
+  background:white;
+  padding:2px;
+}
+
+.footer-tagline{
+  font-size:12px;
+  margin-top:9px;
+  color:#9db3ce;
+}
 
 .footer-links{
- display:flex;justify-content:center;gap:18px;
- flex-wrap:wrap;margin:12px 0;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px 23px;
+  margin:23px 0;
 }
 
-.footer-links a:hover{color:var(--cyan);}
+.footer-links a{
+  color:#d0deef;
+  font-size:12px;
+}
 
-/* LEGAL LINKS */
+.footer-links a:hover{
+  color:var(--cyan);
+}
 
 .footer-legal{
- display:flex;
- justify-content:center;
- align-items:center;
- flex-wrap:wrap;
- gap:10px 18px;
- margin:16px auto;
- padding:13px 10px;
- max-width:500px;
- border-top:1px solid #ffffff20;
- border-bottom:1px solid #ffffff20;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  padding:17px 10px;
+  margin:15px auto;
+  max-width:500px;
+  border-top:1px solid #ffffff20;
+  border-bottom:1px solid #ffffff20;
 }
 
 .footer-legal a{
- color:#55d9ed;
- font-size:13px;
- font-weight:700;
- transition:color .2s;
+  color:var(--cyan);
+  font-size:12px;
+  font-weight:700;
 }
 
-.footer-legal a:hover{color:white;}
+.footer-copy{
+  color:#8095af;
+  font-size:11px;
+  margin-top:20px;
+}
+
+/* BACK TO TOP */
+
+.back-top{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:80;
+  width:43px;
+  height:43px;
+  display:grid;
+  place-items:center;
+  color:white;
+  background:var(--blue);
+  border-radius:13px;
+  box-shadow:0 8px 20px #0878e844;
+  font-size:20px;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+  transition:.2s;
+}
+
+.back-top.visible{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
 
 /* RTL */
 
-html[dir="rtl"] body{text-align:right;}
+html[dir="rtl"] body{
+  text-align:right;
+}
 
 html[dir="rtl"] .hero,
-html[dir="rtl"] .section-title,
-html[dir="rtl"] .contact,
-html[dir="rtl"] footer{text-align:center;}
-
-html[dir="rtl"] .values{text-align:right;}
-
-html[dir="rtl"] .process{
- border-left:0;border-right:3px solid var(--cyan);
+html[dir="rtl"] .section-heading,
+html[dir="rtl"] .contact-box,
+html[dir="rtl"] footer{
+  text-align:center;
 }
 
-html[dir="rtl"] .skip-link{left:auto;right:12px;}
+html[dir="rtl"] .value-row{
+  text-align:right;
+}
 
-/* MOBILE */
+html[dir="rtl"] .app-features li:before{
+  margin-right:0;
+  margin-left:9px;
+}
+
+html[dir="rtl"] .back-top{
+  right:auto;
+  left:20px;
+}
+
+html[dir="rtl"] .skip-link{
+  left:auto;
+  right:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+  .nav-links{
+    gap:13px;
+  }
+
+  .nav-links a{
+    font-size:12px;
+  }
+
+  .about-layout{
+    gap:35px;
+  }
+
+  .app-content{
+    padding:28px;
+  }
+}
 
 @media(max-width:760px){
- .nav{flex-wrap:wrap;padding:10px 16px;}
+  section{
+    padding:72px 0;
+  }
 
- nav{order:3;width:100%;gap:10px 17px;flex-wrap:wrap;}
- nav a{font-size:12px;}
+  .container{
+    width:calc(100% - 34px);
+  }
 
- .hero{padding:55px 18px 78px;}
- .hero-logo{max-width:100%;margin-bottom:24px;}
+  .nav{
+    min-height:68px;
+    padding:10px 17px;
+  }
 
- section{padding:60px 18px;}
+  .menu-toggle{
+    display:block;
+  }
 
- .values,.process-grid{grid-template-columns:1fr;}
- .value{text-align:center;}
+  .nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:10px 18px 17px;
+    background:#07162f;
+    border-top:1px solid #ffffff15;
+  }
 
- .process{
-  border-left:0;border-top:3px solid var(--cyan);
-  padding:14px 5px 4px;text-align:center;
- }
+  .nav-links.open{
+    display:flex;
+  }
 
- html[dir="rtl"] .process{border-right:0;border-top:3px solid var(--cyan);}
+  .nav-links a{
+    padding:12px 8px;
+    font-size:14px;
+    border-bottom:1px solid #ffffff12;
+  }
 
- .contact-card{padding:38px 18px;}
+  .hero{
+    padding:68px 18px 85px;
+  }
+
+  .hero-logo{
+    max-height:155px;
+    margin-bottom:27px;
+  }
+
+  .hero-description{
+    font-size:15px;
+  }
+
+  .trust-inner{
+    margin:0 17px;
+    padding:17px 9px;
+    gap:5px;
+  }
+
+  .trust-item strong{
+    font-size:12px;
+  }
+
+  .trust-item span{
+    font-size:10px;
+  }
+
+  .about-layout{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .services-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .app-feature{
+    grid-template-columns:1fr;
+  }
+
+  .app-visual{
+    min-height:230px;
+  }
+
+  .app-symbol{
+    width:105px;
+    height:105px;
+    font-size:52px;
+    border-radius:27px;
+  }
+
+  .process-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-box{
+    padding:48px 18px;
+  }
 }
 
-@media(max-width:380px){
- .brand{font-size:19px;}
- .brand-logo{width:38px;height:38px;}
- .lang{padding:7px 11px;}
- nav{gap:9px 12px;}
- nav a{font-size:11px;}
+@media(max-width:480px){
+  .brand{
+    font-size:19px;
+  }
+
+  .brand-logo{
+    width:39px;
+    height:39px;
+  }
+
+  .hero h1{
+    font-size:49px;
+  }
+
+  .hero-subtitle{
+    font-size:11px;
+    letter-spacing:2px;
+  }
+
+  .hero-description{
+    font-size:14px;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .actions{
+    width:100%;
+    max-width:310px;
+    margin:auto;
+  }
+
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service-card{
+    padding:25px;
+  }
+
+  .app-content{
+    padding:24px 20px;
+  }
+
+  .app-content h3{
+    font-size:30px;
+  }
+
+  .app-buttons{
+    flex-direction:column;
+  }
+
+  .app-buttons .btn{
+    width:100%;
+  }
+
+  .trust-inner{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .trust-item{
+    padding:5px;
+  }
+
+  .footer-links{
+    gap:12px 16px;
+  }
 }
 
 @media(prefers-reduced-motion:reduce){
- html{scroll-behavior:auto;}
- *,*:before,*:after{transition:none!important;animation:none!important;}
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *:before,
+  *:after{
+    animation:none!important;
+    transition:none!important;
+  }
 }
 </style>
 </head>
@@ -426,307 +1192,481 @@ html[dir="rtl"] .skip-link{left:auto;right:12px;}
  Skip to content
 </a>
 
+<!-- HEADER -->
+
 <header>
- <div class="nav">
+  <div class="nav">
 
-  <a class="brand" href="#home" aria-label="QUE Soft home">
-   <img class="brand-logo" src="quesoft-icon.png"
-    alt="QUE Soft logo" width="43" height="43" decoding="async">
-   <span>QUE Soft</span>
-  </a>
+    <a class="brand" href="#home" aria-label="QUE Soft home">
+      <img class="brand-logo"
+       src="quesoft-icon.png"
+       alt="QUE Soft logo"
+       width="44" height="44">
+      <span>QUE Soft</span>
+    </a>
 
-  <nav aria-label="Main navigation">
-   <a href="#home" data-en="Home" data-fa="خانه">Home</a>
-   <a href="#about" data-en="About" data-fa="درباره ما">About</a>
-   <a href="#services" data-en="Services" data-fa="خدمات">Services</a>
-   <a href="#apps" data-en="Our Apps" data-fa="برنامه‌ها">Our Apps</a>
-   <a href="#approach" data-en="Our Approach" data-fa="روش کار ما">Our Approach</a>
-   <a href="#contact" data-en="Contact" data-fa="تماس">Contact</a>
-  </nav>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#home" data-en="Home" data-fa="خانه">Home</a>
+      <a href="#about" data-en="About" data-fa="درباره ما">About</a>
+      <a href="#services" data-en="Services" data-fa="خدمات">Services</a>
+      <a href="#apps" data-en="Our Apps" data-fa="برنامه‌ها">Our Apps</a>
+      <a href="#approach" data-en="Our Approach" data-fa="روش کار">Our Approach</a>
+      <a href="#contact" data-en="Contact" data-fa="تماس">Contact</a>
+    </nav>
 
-  <button class="lang" id="langBtn" type="button"
-   onclick="changeLanguage()" aria-label="Switch to Persian">
-   فارسی
-  </button>
+    <div class="nav-actions">
+      <button class="lang" id="langBtn" type="button"
+       onclick="changeLanguage()" aria-label="Switch to Persian">
+        فارسی
+      </button>
 
- </div>
+      <button class="menu-toggle" id="menuToggle"
+       type="button" aria-label="Open navigation menu"
+       aria-expanded="false" aria-controls="navLinks">
+        ☰
+      </button>
+    </div>
+
+  </div>
 </header>
 
 <main id="main">
 
-<!-- HOME -->
+<!-- HERO -->
 
 <section class="hero" id="home">
- <div class="hero-inner">
+  <div class="hero-inner">
 
-  <img class="hero-logo" src="quesoft-horizontal.png"
-   alt="QUE Soft - Independent Software Development Brand"
-   width="1536" height="1024" loading="eager"
-   fetchpriority="high" decoding="async">
+    <img class="hero-logo"
+     src="quesoft-horizontal.png"
+     alt="QUE Soft Software Development"
+     width="1536" height="1024"
+     fetchpriority="high"
+     decoding="async">
 
-  <span class="eyebrow"
-   data-en="INDEPENDENT SOFTWARE BRAND"
-   data-fa="برند مستقل توسعه نرم‌افزار">
-   INDEPENDENT SOFTWARE BRAND
-  </span>
+    <span class="eyebrow"
+     data-en="INDEPENDENT SOFTWARE DEVELOPMENT"
+     data-fa="توسعه مستقل نرم‌افزار">
+      INDEPENDENT SOFTWARE DEVELOPMENT
+    </span>
 
-  <h1>QUE <span>Soft</span></h1>
+    <h1>QUE <span>Soft</span></h1>
 
-  <h2 data-en="SOFTWARE DEVELOPMENT" data-fa="توسعه نرم‌افزار">
-   SOFTWARE DEVELOPMENT
-  </h2>
+    <div class="hero-subtitle"
+     data-en="SOFTWARE DEVELOPMENT"
+     data-fa="توسعه نرم‌افزار">
+      SOFTWARE DEVELOPMENT
+    </div>
 
-  <p
-   data-en="We build useful, accessible and reliable Android applications and digital solutions that help people solve everyday problems."
-   data-fa="ما برنامه‌های کاربردی اندروید و راهکارهای دیجیتالی قابل دسترس و قابل اعتماد می‌سازیم تا به مردم در حل نیازها و مشکلات روزمره کمک کنیم.">
-   We build useful, accessible and reliable Android applications and digital solutions that help people solve everyday problems.
-  </p>
+    <p class="hero-description"
+     data-en="We create practical Android applications and digital solutions designed to make everyday tasks simpler, smarter and more accessible."
+     data-fa="ما برنامه‌های کاربردی اندروید و راهکارهای دیجیتالی می‌سازیم تا کارهای روزمره ساده‌تر، هوشمندانه‌تر و قابل‌دسترس‌تر شوند.">
+      We create practical Android applications and digital solutions designed to make everyday tasks simpler, smarter and more accessible.
+    </p>
 
-  <div class="actions">
-   <a class="primary-btn" href="#apps"
-    data-en="Explore Our Apps" data-fa="مشاهده برنامه‌ها">
-    Explore Our Apps
-   </a>
+    <div class="actions">
+      <a class="btn btn-primary" href="#apps">
+        <span data-en="Explore HisabPro" data-fa="مشاهده حساب‌پرو">Explore HisabPro</span>
+        <span aria-hidden="true">↗</span>
+      </a>
 
-   <a class="secondary-btn" href="#contact"
-    data-en="Contact Us" data-fa="تماس با ما">
-    Contact Us
-   </a>
+      <a class="btn btn-secondary" href="#contact"
+       data-en="Get in Touch"
+       data-fa="ارتباط با ما">
+        Get in Touch
+      </a>
+    </div>
+
   </div>
-
- </div>
 </section>
+
+<!-- TRUST STRIP -->
+
+<div class="trust-strip">
+  <div class="trust-inner">
+
+    <div class="trust-item">
+      <strong data-en="Independent Brand" data-fa="برند مستقل">
+        Independent Brand
+      </strong>
+      <span data-en="Software Development" data-fa="توسعه نرم‌افزار">
+        Software Development
+      </span>
+    </div>
+
+    <div class="trust-item">
+      <strong data-en="Android Focused" data-fa="متمرکز بر اندروید">
+        Android Focused
+      </strong>
+      <span data-en="Practical Applications" data-fa="برنامه‌های کاربردی">
+        Practical Applications
+      </span>
+    </div>
+
+    <div class="trust-item">
+      <strong data-en="User First" data-fa="کاربر در اولویت">
+        User First
+      </strong>
+      <span data-en="Simple Digital Experiences" data-fa="تجربه دیجیتالی ساده">
+        Simple Digital Experiences
+      </span>
+    </div>
+
+  </div>
+</div>
 
 <!-- ABOUT -->
 
 <section class="about" id="about">
- <div class="container">
+  <div class="container">
 
-  <div class="section-title">
-   <h2 data-en="About QUE Soft" data-fa="درباره QUE Soft">About QUE Soft</h2>
-   <p data-en="Technology with purpose" data-fa="تکنولوژی با هدف مشخص">Technology with purpose</p>
+    <div class="about-layout">
+
+      <div class="about-text">
+
+        <span class="section-label"
+         data-en="WHO WE ARE"
+         data-fa="ما چه کسانی هستیم">
+          WHO WE ARE
+        </span>
+
+        <h2 data-en="Technology with a Purpose"
+         data-fa="تکنولوژی با هدفی مشخص">
+          Technology with a Purpose
+        </h2>
+
+        <p
+         data-en="QUE Soft is an independent software development brand founded by Qudrat Ullah Elyas. We focus on creating practical digital products that solve real problems and provide meaningful value."
+         data-fa="QUE Soft یک برند مستقل توسعه نرم‌افزار است که توسط قدرت‌الله الیاس بنیان‌گذاری شده است. تمرکز ما ساخت محصولات دیجیتالی کاربردی است که مشکلات واقعی را حل کرده و ارزش مفیدی ایجاد کنند.">
+          QUE Soft is an independent software development brand founded by Qudrat Ullah Elyas. We focus on creating practical digital products that solve real problems and provide meaningful value.
+        </p>
+
+        <p
+         data-en="Our approach combines clear design, useful features and continuous improvement. We believe good software should be understandable, accessible and dependable."
+         data-fa="روش کار ما ترکیبی از طراحی روشن، قابلیت‌های مفید و بهبود مستمر است. باور داریم نرم‌افزار خوب باید قابل‌فهم، قابل‌دسترس و قابل‌اعتماد باشد.">
+          Our approach combines clear design, useful features and continuous improvement. We believe good software should be understandable, accessible and dependable.
+        </p>
+
+      </div>
+
+      <div class="about-panel">
+
+        <h3 data-en="What We Believe" data-fa="باورهای ما">
+          What We Believe
+        </h3>
+
+        <div class="value-row">
+          <div class="value-icon" aria-hidden="true">✦</div>
+          <div>
+            <strong data-en="Purposeful Innovation"
+             data-fa="نوآوری هدفمند">
+              Purposeful Innovation
+            </strong>
+            <p data-en="Technology should solve meaningful problems."
+             data-fa="تکنولوژی باید مشکلات مهم را حل کند.">
+              Technology should solve meaningful problems.
+            </p>
+          </div>
+        </div>
+
+        <div class="value-row">
+          <div class="value-icon" aria-hidden="true">◎</div>
+          <div>
+            <strong data-en="Simple Experiences"
+             data-fa="تجربه‌های ساده">
+              Simple Experiences
+            </strong>
+            <p data-en="Products should be easy to understand and use."
+             data-fa="محصولات باید ساده و قابل‌فهم باشند.">
+              Products should be easy to understand and use.
+            </p>
+          </div>
+        </div>
+
+        <div class="value-row">
+          <div class="value-icon" aria-hidden="true">◇</div>
+          <div>
+            <strong data-en="Quality & Trust"
+             data-fa="کیفیت و اعتماد">
+              Quality & Trust
+            </strong>
+            <p data-en="We value reliability and continuous improvement."
+             data-fa="به قابلیت اعتماد و بهبود مستمر اهمیت می‌دهیم.">
+              We value reliability and continuous improvement.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </div>
-
-  <p class="about-copy"
-   data-en="QUE Soft is an independent software development brand founded by Qudrat Ullah Elyas. We focus on creating practical digital products with clear purpose, simple experiences and real value for users. Our work begins with understanding a need and turning it into a useful solution."
-   data-fa="QUE Soft یک برند مستقل توسعه نرم‌افزار است که توسط قدرت‌الله الیاس بنیان‌گذاری شده است. تمرکز ما ساخت محصولات دیجیتالی کاربردی با هدف روشن، تجربه ساده و ارزش واقعی برای کاربران است. کار ما با شناخت یک نیاز آغاز می‌شود و با تبدیل آن به یک راهکار مفید ادامه می‌یابد.">
-   QUE Soft is an independent software development brand founded by Qudrat Ullah Elyas. We focus on creating practical digital products with clear purpose, simple experiences and real value for users. Our work begins with understanding a need and turning it into a useful solution.
-  </p>
-
-  <div class="values">
-
-   <div class="value">
-    <strong data-en="Useful by design" data-fa="کاربردی از ابتدا">Useful by design</strong>
-    <p data-en="We prioritize features that address real user needs."
-     data-fa="قابلیت‌هایی را در اولویت قرار می‌دهیم که به نیاز واقعی کاربران پاسخ دهند.">
-     We prioritize features that address real user needs.
-    </p>
-   </div>
-
-   <div class="value">
-    <strong data-en="Simple to use" data-fa="ساده برای استفاده">Simple to use</strong>
-    <p data-en="We aim for clear interfaces and straightforward workflows."
-     data-fa="هدف ما طراحی رابط‌های روشن و روندهای کاری ساده است.">
-     We aim for clear interfaces and straightforward workflows.
-    </p>
-   </div>
-
-   <div class="value">
-    <strong data-en="Built with care" data-fa="ساخته‌شده با دقت">Built with care</strong>
-    <p data-en="We value reliability, improvement and user trust."
-     data-fa="به قابلیت اعتماد، بهبود مستمر و اعتماد کاربران اهمیت می‌دهیم.">
-     We value reliability, improvement and user trust.
-    </p>
-   </div>
-
-  </div>
- </div>
 </section>
 
 <!-- SERVICES -->
 
-<section id="services">
- <div class="container">
+<section class="services" id="services">
+  <div class="container">
 
-  <div class="section-title">
-   <h2 data-en="What We Do" data-fa="خدمات ما">What We Do</h2>
-   <p data-en="Our areas of focus" data-fa="زمینه‌های فعالیت ما">Our areas of focus</p>
-  </div>
-
-  <div class="services-grid">
-
-   <article class="service">
-    <div class="service-icon" aria-hidden="true">📱</div>
-    <h3 data-en="Mobile Applications" data-fa="اپلیکیشن‌های موبایل">Mobile Applications</h3>
-    <p data-en="Android applications designed around practical everyday needs."
-     data-fa="ساخت برنامه‌های اندرویدی بر اساس نیازهای کاربردی روزمره.">
-     Android applications designed around practical everyday needs.
-    </p>
-   </article>
-
-   <article class="service">
-    <div class="service-icon" aria-hidden="true">💻</div>
-    <h3 data-en="Software Solutions" data-fa="راهکارهای نرم‌افزاری">Software Solutions</h3>
-    <p data-en="Focused digital tools that make tasks and decisions easier."
-     data-fa="ابزارهای دیجیتالی هدفمند برای آسان‌ترشدن کارها و تصمیم‌گیری‌ها.">
-     Focused digital tools that make tasks and decisions easier.
-    </p>
-   </article>
-
-   <article class="service">
-    <div class="service-icon" aria-hidden="true">🌐</div>
-    <h3 data-en="Digital Experiences" data-fa="تجربه‌های دیجیتالی">Digital Experiences</h3>
-    <p data-en="Clear, accessible and user-friendly digital products."
-     data-fa="محصولات دیجیتالی روشن، قابل دسترس و کاربرپسند.">
-     Clear, accessible and user-friendly digital products.
-    </p>
-   </article>
-
-  </div>
- </div>
-</section>
-
-<!-- APPLICATIONS -->
-
-<section class="apps" id="apps">
- <div class="container">
-
-  <div class="section-title">
-   <h2 data-en="Our Application" data-fa="برنامه ما">Our Application</h2>
-   <p data-en="Discover our published Android application."
-    data-fa="با برنامه اندرویدی منتشرشده ما آشنا شوید.">
-    Discover our published Android application.
-   </p>
-  </div>
-
-  <div class="apps-grid">
-
-   <!-- HISABPRO -->
-
-   <article class="app">
-    <div class="app-icon" aria-hidden="true">🧮</div>
-
-    <span class="app-category"
-     data-en="ACCOUNTING & MANAGEMENT"
-     data-fa="حسابداری و مدیریت">
-     ACCOUNTING & MANAGEMENT
-    </span>
-
-    <h3>HisabPro</h3>
-
-    <p class="app-description"
-     data-en="HisabPro is an Android accounting and business management application. Download the published version for your Android device."
-     data-fa="حساب‌پرو یک برنامه اندرویدی حسابداری و مدیریت کسب‌وکار است. نسخه منتشرشده آن را برای دستگاه اندرویدی خود دریافت کنید.">
-     HisabPro is an Android accounting and business management application. Download the published version for your Android device.
-    </p>
-
-    <ul class="app-features">
-     <li data-en="Android application" data-fa="برنامه اندرویدی">Android application</li>
-     <li data-en="Published version 1.7.0" data-fa="نسخه منتشرشده ۱.۷.۰">Published version 1.7.0</li>
-     <li data-en="Official APK download" data-fa="دانلود رسمی فایل APK">Official APK download</li>
-    </ul>
-
-    <div class="app-bottom">
-     <div class="app-status">
-      <span data-en="Published · Version 1.7.0"
-       data-fa="منتشرشده · نسخه ۱.۷.۰">
-       Published · Version 1.7.0
+    <div class="section-heading">
+      <span class="section-label"
+       data-en="OUR EXPERTISE"
+       data-fa="زمینه فعالیت ما">
+        OUR EXPERTISE
       </span>
 
-      <small data-en="The Android APK is available for download."
-       data-fa="فایل APK اندروید برای دانلود در دسترس است.">
-       The Android APK is available for download.
-      </small>
-     </div>
+      <h2 data-en="What We Do" data-fa="خدمات ما">
+        What We Do
+      </h2>
 
-     <a class="app-contact"
-      href="https://github.com/qudratelyas4-hue/HisabPro-Releases/releases/download/v1.7.0/HisabPro-release.apk"
-      target="_blank"
-      rel="noopener noreferrer"
-      data-en="Download HisabPro APK"
-      data-fa="دانلود فایل APK حساب‌پرو">
-      Download HisabPro APK
-     </a>
-
-     <a class="app-contact"
-      style="margin-top:10px;background:#0878e8;"
-      href="https://github.com/qudratelyas4-hue/HisabPro-Releases/releases/tag/v1.7.0"
-      target="_blank"
-      rel="noopener noreferrer"
-      data-en="View GitHub Release"
-      data-fa="مشاهده انتشار در GitHub">
-      View GitHub Release
-     </a>
+      <p data-en="Focused digital solutions built around real-world needs."
+       data-fa="راهکارهای دیجیتالی هدفمند بر اساس نیازهای واقعی.">
+        Focused digital solutions built around real-world needs.
+      </p>
     </div>
-   </article>
+
+    <div class="services-grid">
+
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">▣</div>
+        <h3 data-en="Android Applications"
+         data-fa="برنامه‌های اندرویدی">
+          Android Applications
+        </h3>
+        <p data-en="Practical mobile applications designed for usability, performance and everyday needs."
+         data-fa="برنامه‌های موبایل کاربردی با تمرکز بر سهولت استفاده، عملکرد و نیازهای روزمره.">
+          Practical mobile applications designed for usability, performance and everyday needs.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">⌘</div>
+        <h3 data-en="Software Solutions"
+         data-fa="راهکارهای نرم‌افزاری">
+          Software Solutions
+        </h3>
+        <p data-en="Focused digital tools that help people organize tasks and manage information."
+         data-fa="ابزارهای دیجیتالی هدفمند برای سازمان‌دهی کارها و مدیریت اطلاعات.">
+          Focused digital tools that help people organize tasks and manage information.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">◇</div>
+        <h3 data-en="Digital Experiences"
+         data-fa="تجربه‌های دیجیتالی">
+          Digital Experiences
+        </h3>
+        <p data-en="Clean and accessible digital interfaces with a focus on clarity and ease of use."
+         data-fa="رابط‌های دیجیتالی پاکیزه و قابل‌دسترس با تمرکز بر وضوح و سهولت استفاده.">
+          Clean and accessible digital interfaces with a focus on clarity and ease of use.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION -->
+
+<section class="apps" id="apps">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="section-label"
+       data-en="OUR PRODUCT"
+       data-fa="محصول ما">
+        OUR PRODUCT
+      </span>
+
+      <h2 data-en="Featured Application"
+       data-fa="برنامه معرفی‌شده">
+        Featured Application
+      </h2>
+
+      <p data-en="Discover the Android application published by QUE Soft."
+       data-fa="با برنامه اندرویدی منتشرشده توسط QUE Soft آشنا شوید.">
+        Discover the Android application published by QUE Soft.
+      </p>
+    </div>
+
+    <article class="app-feature">
+
+      <div class="app-visual">
+        <div class="app-symbol" aria-hidden="true">▦</div>
+      </div>
+
+      <div class="app-content">
+
+        <span class="app-tag"
+         data-en="ACCOUNTING & MANAGEMENT"
+         data-fa="حسابداری و مدیریت">
+          ACCOUNTING & MANAGEMENT
+        </span>
+
+        <h3>HisabPro</h3>
+
+        <div class="app-version"
+         data-en="ANDROID APP · VERSION 1.7.0"
+         data-fa="برنامه اندروید · نسخه ۱.۷.۰">
+          ANDROID APP · VERSION 1.7.0
+        </div>
+
+        <p class="app-description"
+         data-en="HisabPro is an Android accounting and business management application. Get the published version for your Android device."
+         data-fa="حساب‌پرو یک برنامه اندرویدی حسابداری و مدیریت کسب‌وکار است. نسخه منتشرشده آن را برای دستگاه اندرویدی خود دریافت کنید.">
+          HisabPro is an Android accounting and business management application. Get the published version for your Android device.
+        </p>
+
+        <ul class="app-features">
+          <li data-en="Android application"
+           data-fa="برنامه مخصوص اندروید">
+            Android application
+          </li>
+
+          <li data-en="Published version 1.7.0"
+           data-fa="نسخه منتشرشده ۱.۷.۰">
+            Published version 1.7.0
+          </li>
+
+          <li data-en="Official GitHub release"
+           data-fa="انتشار رسمی در GitHub">
+            Official GitHub release
+          </li>
+        </ul>
+
+        <div class="app-buttons">
+
+          <a class="btn app-download"
+           href="https://github.com/qudratelyas4-hue/HisabPro-Releases/releases/download/v1.7.0/HisabPro-release.apk"
+           target="_blank"
+           rel="noopener noreferrer">
+            <span data-en="Download APK"
+             data-fa="دانلود فایل APK">
+              Download APK
+            </span>
+            <span aria-hidden="true">↓</span>
+          </a>
+
+          <a class="btn app-release"
+           href="https://github.com/qudratelyas4-hue/HisabPro-Releases/releases/tag/v1.7.0"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-en="View Release"
+           data-fa="مشاهده نسخه منتشرشده">
+            View Release
+          </a>
+
+        </div>
+
+      </div>
+    </article>
 
   </div>
- </div>
 </section>
 
 <!-- APPROACH -->
 
-<section id="approach">
- <div class="container">
+<section class="approach" id="approach">
+  <div class="container">
 
-  <div class="section-title">
-   <h2 data-en="Our Approach" data-fa="روش کار ما">Our Approach</h2>
-   <p data-en="From a real need to a useful product"
-    data-fa="از یک نیاز واقعی تا یک محصول کاربردی">
-    From a real need to a useful product
-   </p>
+    <div class="section-heading">
+      <span class="section-label"
+       data-en="HOW WE WORK"
+       data-fa="چگونه کار می‌کنیم">
+        HOW WE WORK
+      </span>
+
+      <h2 data-en="Our Approach"
+       data-fa="روش کار ما">
+        Our Approach
+      </h2>
+
+      <p data-en="A thoughtful process from understanding a problem to improving a solution."
+       data-fa="یک روند هدفمند از شناخت مشکل تا بهبود راهکار.">
+        A thoughtful process from understanding a problem to improving a solution.
+      </p>
+    </div>
+
+    <div class="process-grid">
+
+      <article class="process-card">
+        <span class="process-number">01</span>
+        <h3 data-en="Understand"
+         data-fa="شناخت نیاز">
+          Understand
+        </h3>
+        <p data-en="We identify real needs and understand the problems a product should solve."
+         data-fa="نیازهای واقعی را شناسایی می‌کنیم و مشکلاتی را که محصول باید حل کند، می‌شناسیم.">
+          We identify real needs and understand the problems a product should solve.
+        </p>
+      </article>
+
+      <article class="process-card">
+        <span class="process-number">02</span>
+        <h3 data-en="Develop"
+         data-fa="توسعه">
+          Develop
+        </h3>
+        <p data-en="We build focused solutions with usability, clarity and reliability in mind."
+         data-fa="راهکارهایی هدفمند با درنظرگرفتن سهولت استفاده، وضوح و قابلیت اعتماد می‌سازیم.">
+          We build focused solutions with usability, clarity and reliability in mind.
+        </p>
+      </article>
+
+      <article class="process-card">
+        <span class="process-number">03</span>
+        <h3 data-en="Improve"
+         data-fa="بهبود">
+          Improve
+        </h3>
+        <p data-en="We review, test and refine products to make them better over time."
+         data-fa="محصولات را بررسی، آزمایش و اصلاح می‌کنیم تا به‌مرور بهتر شوند.">
+          We review, test and refine products to make them better over time.
+        </p>
+      </article>
+
+    </div>
   </div>
-
-  <div class="process-grid">
-
-   <div class="process">
-    <b data-en="01 — Understand" data-fa="۰۱ — شناخت نیاز">01 — Understand</b>
-    <p data-en="We identify the problem and the people a product should help."
-     data-fa="مشکل و افرادی را که محصول باید به آن‌ها کمک کند، شناسایی می‌کنیم.">
-     We identify the problem and the people a product should help.
-    </p>
-   </div>
-
-   <div class="process">
-    <b data-en="02 — Build" data-fa="۰۲ — ساخت راهکار">02 — Build</b>
-    <p data-en="We develop a focused solution with usability and reliability in mind."
-     data-fa="با درنظرگرفتن سهولت استفاده و قابلیت اعتماد، راهکاری هدفمند می‌سازیم.">
-     We develop a focused solution with usability and reliability in mind.
-    </p>
-   </div>
-
-   <div class="process">
-    <b data-en="03 — Improve" data-fa="۰۳ — بهبود مستمر">03 — Improve</b>
-    <p data-en="We test, learn and refine products as they evolve."
-     data-fa="با آزمایش، یادگیری و دریافت بازخورد، محصولات را بهبود می‌دهیم.">
-     We test, learn and refine products as they evolve.
-    </p>
-   </div>
-
-  </div>
- </div>
 </section>
 
 <!-- CONTACT -->
 
 <section class="contact" id="contact">
- <div class="container">
+  <div class="container">
 
-  <div class="contact-card">
-   <h2 data-en="Let's Connect" data-fa="با ما در ارتباط باشید">Let's Connect</h2>
-   <p data-en="Have a question, suggestion or project idea? We would be glad to hear from you."
-    data-fa="پرسش، پیشنهاد یا ایده‌ای برای یک پروژه دارید؟ خوشحال می‌شویم از شما بشنویم.">
-    Have a question, suggestion or project idea? We would be glad to hear from you.
-   </p>
-   <a class="email" href="mailto:quesoft0@gmail.com">quesoft0@gmail.com</a>
-   <p class="contact-note"
-    data-en="For general questions and business inquiries."
-    data-fa="برای پرسش‌های عمومی و همکاری‌های کاری.">
-    For general questions and business inquiries.
-   </p>
+    <div class="contact-box">
+
+      <span class="section-label"
+       style="color:#7cecff"
+       data-en="GET IN TOUCH"
+       data-fa="با ما در تماس باشید">
+        GET IN TOUCH
+      </span>
+
+      <h2 data-en="Let's Build Something Useful"
+       data-fa="بیایید چیزی کاربردی بسازیم">
+        Let's Build Something Useful
+      </h2>
+
+      <p data-en="Have a question, suggestion or business inquiry? Get in touch with QUE Soft."
+       data-fa="پرسش، پیشنهاد یا درخواست همکاری دارید؟ با QUE Soft در تماس شوید.">
+        Have a question, suggestion or business inquiry? Get in touch with QUE Soft.
+      </p>
+
+      <a class="contact-email"
+       href="mailto:quesoft0@gmail.com">
+        quesoft0@gmail.com
+      </a>
+
+      <p class="contact-caption"
+       data-en="For general questions and business inquiries."
+       data-fa="برای پرسش‌های عمومی و درخواست‌های همکاری.">
+        For general questions and business inquiries.
+      </p>
+
+    </div>
   </div>
-
- </div>
 </section>
 
 </main>
@@ -735,92 +1675,151 @@ html[dir="rtl"] .skip-link{left:auto;right:12px;}
 
 <footer>
 
- <strong>QUE Soft</strong>
+  <div class="footer-brand">
+    <img src="quesoft-icon.png"
+     alt="QUE Soft icon"
+     width="35" height="35"
+     loading="lazy">
+    <span>QUE Soft</span>
+  </div>
 
- <p data-en="Building a Better Digital Future"
-  data-fa="ساخت آینده دیجیتالی بهتر">
-  Building a Better Digital Future
- </p>
+  <p class="footer-tagline"
+   data-en="Building a Better Digital Future"
+   data-fa="ساخت آینده دیجیتالی بهتر">
+    Building a Better Digital Future
+  </p>
 
- <div class="footer-links">
-  <a href="#about" data-en="About" data-fa="درباره ما">About</a>
-  <a href="#apps" data-en="Applications" data-fa="برنامه‌ها">Applications</a>
-  <a href="#contact" data-en="Contact" data-fa="تماس">Contact</a>
-  <a href="mailto:quesoft0@gmail.com" data-en="Email Us" data-fa="ارسال ایمیل">
-   Email Us
-  </a>
- </div>
+  <div class="footer-links">
+    <a href="#home" data-en="Home" data-fa="خانه">Home</a>
+    <a href="#about" data-en="About" data-fa="درباره ما">About</a>
+    <a href="#services" data-en="Services" data-fa="خدمات">Services</a>
+    <a href="#apps" data-en="Applications" data-fa="برنامه‌ها">Applications</a>
+    <a href="#contact" data-en="Contact" data-fa="تماس">Contact</a>
+  </div>
 
- <div class="footer-legal">
-  <a href="privacy.html"
-   data-en="Privacy Policy"
-   data-fa="سیاست حفظ حریم خصوصی">
-   Privacy Policy
-  </a>
+  <div class="footer-legal">
+    <a href="privacy.html"
+     data-en="Privacy Policy"
+     data-fa="سیاست حفظ حریم خصوصی">
+      Privacy Policy
+    </a>
 
-  <span aria-hidden="true">|</span>
+    <span aria-hidden="true">|</span>
 
-  <a href="terms.html"
-   data-en="Terms & Conditions"
-   data-fa="شرایط و ضوابط">
-   Terms & Conditions
-  </a>
- </div>
+    <a href="terms.html"
+     data-en="Terms & Conditions"
+     data-fa="شرایط و ضوابط">
+      Terms & Conditions
+    </a>
+  </div>
 
- <p>
-  © 2026 QUE Soft.
-  <span data-en="All Rights Reserved." data-fa="تمام حقوق محفوظ است.">
-   All Rights Reserved.
-  </span>
- </p>
+  <p class="footer-copy">
+    © 2026 QUE Soft.
+    <span data-en="All Rights Reserved."
+     data-fa="تمام حقوق محفوظ است.">
+      All Rights Reserved.
+    </span>
+  </p>
 
 </footer>
+
+<a class="back-top" id="backTop"
+ href="#home" aria-label="Back to top">
+  ↑
+</a>
 
 <script>
 "use strict";
 
+/* LANGUAGE */
+
 let currentLang = "en";
 
 const pageTitle = {
- en:"QUE Soft | HisabPro Android App & Software Development",
- fa:"QUE Soft | حساب‌پرو و توسعه نرم‌افزار"
+  en:"QUE Soft | Software Development & HisabPro",
+  fa:"QUE Soft | توسعه نرم‌افزار و حساب‌پرو"
 };
 
 const pageDescription = {
- en:"QUE Soft is an independent software development brand creating practical Android applications and digital solutions. Discover HisabPro, an Android accounting and business management application, and download version 1.7.0.",
- fa:"QUE Soft یک برند مستقل توسعه نرم‌افزار است که برنامه‌های کاربردی اندروید و راهکارهای دیجیتالی مفید می‌سازد. با حساب‌پرو، برنامه اندرویدی حسابداری و مدیریت کسب‌وکار، آشنا شوید و نسخه ۱.۷.۰ را دریافت کنید."
+  en:"QUE Soft is an independent software development brand creating practical Android applications and digital solutions. Discover HisabPro version 1.7.0.",
+  fa:"QUE Soft یک برند مستقل توسعه نرم‌افزار است که برنامه‌های کاربردی اندروید و راهکارهای دیجیتالی مفید می‌سازد. با حساب‌پرو نسخه ۱.۷.۰ آشنا شوید."
 };
 
 function changeLanguage(){
 
- currentLang = currentLang === "en" ? "fa" : "en";
+  currentLang = currentLang === "en" ? "fa" : "en";
 
- const isPersian = currentLang === "fa";
+  const isPersian = currentLang === "fa";
 
- document.documentElement.lang = currentLang;
- document.documentElement.dir = isPersian ? "rtl" : "ltr";
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = isPersian ? "rtl" : "ltr";
 
- document.querySelectorAll("[data-en][data-fa]").forEach(element => {
-  element.textContent = element.getAttribute("data-" + currentLang);
- });
+  document.querySelectorAll("[data-en][data-fa]").forEach(element=>{
+    element.textContent = element.getAttribute("data-" + currentLang);
+  });
 
- const langButton = document.getElementById("langBtn");
+  const button = document.getElementById("langBtn");
 
- langButton.textContent = isPersian ? "English" : "فارسی";
+  button.textContent = isPersian ? "English" : "فارسی";
 
- langButton.setAttribute(
-  "aria-label",
-  isPersian ? "Switch to English" : "Switch to Persian"
- );
+  button.setAttribute(
+    "aria-label",
+    isPersian ? "Switch to English" : "Switch to Persian"
+  );
 
- document.title = pageTitle[currentLang];
+  document.title = pageTitle[currentLang];
 
- document.querySelector('meta[name="description"]').setAttribute(
-  "content",
-  pageDescription[currentLang]
- );
+  document.querySelector('meta[name="description"]')
+    .setAttribute("content",pageDescription[currentLang]);
 
 }
+
+/* MOBILE NAVIGATION */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click",()=>{
+
+  const isOpen = navLinks.classList.toggle("open");
+
+  menuToggle.setAttribute("aria-expanded",String(isOpen));
+
+  menuToggle.setAttribute(
+    "aria-label",
+    isOpen ? "Close navigation menu" : "Open navigation menu"
+  );
+
+  menuToggle.textContent = isOpen ? "×" : "☰";
+
+});
+
+navLinks.querySelectorAll("a").forEach(link=>{
+
+  link.addEventListener("click",()=>{
+
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded","false");
+    menuToggle.setAttribute("aria-label","Open navigation menu");
+    menuToggle.textContent = "☰";
+
+  });
+
+});
+
+/* BACK TO TOP */
+
+const backTop = document.getElementById("backTop");
+
+window.addEventListener("scroll",()=>{
+
+  if(window.scrollY > 450){
+    backTop.classList.add("visible");
+  }else{
+    backTop.classList.remove("visible");
+  }
+
+},{passive:true});
 
 </script>
 
