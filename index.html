@@ -1192,6 +1192,125 @@ body.fa .trust-item:last-child {
     animation-duration: .01ms !important;
   }
 }
+
+/* Optional Firebase Account */
+.auth-open-btn {
+  border: 1px solid rgba(53,213,220,.45);
+    color: var(--cyan);
+      background: rgba(53,213,220,.08);
+        padding: 9px 14px;
+          border-radius: 10px;
+            cursor: pointer;
+              font-size: 12px;
+                font-weight: 800;
+                }
+                .auth-overlay {
+                  position: fixed;
+                    inset: 0;
+                      z-index: 3000;
+                        display: none;
+                          align-items: center;
+                            justify-content: center;
+                              padding: 18px;
+                                background: rgba(1,8,18,.78);
+                                  backdrop-filter: blur(8px);
+                                  }
+                                  .auth-overlay.open { display: flex; }
+                                  .auth-dialog {
+                                    width: min(100%, 430px);
+                                      max-height: 90vh;
+                                        overflow-y: auto;
+                                          padding: 28px;
+                                            border: 1px solid rgba(255,255,255,.14);
+                                              border-radius: 22px;
+                                                background: #10243d;
+                                                    box-shadow: var(--shadow);
+                                                      position: relative;
+                                                      }
+                                                      .auth-dialog h2 { font-size: 25px; margin: 5px 0 8px; }
+                                                      .auth-dialog > p { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+                                                      .auth-close {
+                                                        position: absolute;
+                                                          top: 13px;
+                                                            right: 15px;
+                                                              border: 0;
+                                                                background: transparent;
+                                                                  color: white;
+                                                                    font-size: 25px;
+                                                                      cursor: pointer;
+                                                                      }
+                                                                      .auth-field { display: block; margin: 13px 0; }
+                                                                      .auth-field span {
+                                                                        display: block;
+                                                                          margin-bottom: 6px;
+                                                                            color: #dce8f6;
+                                                                                font-size: 12px;
+                                                                                  font-weight: 700;
+                                                                                  }
+                                                                                  .auth-field input {
+                                                                                    width: 100%;
+                                                                                      padding: 13px 14px;
+                                                                                        border-radius: 10px;
+                                                                                          border: 1px solid var(--line);
+                                                                                            background: #091a2e;
+                                                                                                color: white;
+                                                                                                  font: inherit;
+                                                                                                    outline: none;
+                                                                                                    }
+                                                                                                    .auth-field input:focus { border-color: var(--cyan); }
+                                                                                                    .auth-actions { display: grid; gap: 10px; margin-top: 18px; }
+                                                                                                    .auth-actions button {
+                                                                                                      width: 100%;
+                                                                                                        min-height: 45px;
+                                                                                                          border-radius: 11px;
+                                                                                                            cursor: pointer;
+                                                                                                              font: inherit;
+                                                                                                                font-size: 13px;
+                                                                                                                  font-weight: 800;
+                                                                                                                  }
+                                                                                                                  .auth-primary {
+                                                                                                                    border: 0;
+                                                                                                                      color: #041521;
+                                                                                                                          background: linear-gradient(110deg,var(--cyan),#7ce9dc);
+                                                                                                                          }
+                                                                                                                          .auth-google {
+                                                                                                                            border: 1px solid rgba(255,255,255,.2);
+                                                                                                                              color: white;
+                                                                                                                                background: rgba(255,255,255,.04);
+                                                                                                                                }
+                                                                                                                                .auth-secondary {
+                                                                                                                                  border: 0;
+                                                                                                                                    color: var(--cyan);
+                                                                                                                                      background: transparent;
+                                                                                                                                      }
+                                                                                                                                      .auth-status {
+                                                                                                                                        min-height: 22px;
+                                                                                                                                          margin-top: 13px;
+                                                                                                                                            color: var(--muted);
+                                                                                                                                              font-size: 12px;
+                                                                                                                                                overflow-wrap: anywhere;
+                                                                                                                                                }
+                                                                                                                                                .auth-user {
+                                                                                                                                                  display: none;
+                                                                                                                                                    margin-top: 12px;
+                                                                                                                                                      padding: 12px;
+                                                                                                                                                        border-radius: 10px;
+                                                                                                                                                          background: rgba(53,213,220,.08);
+                                                                                                                                                            color: #dce8f6;
+                                                                                                                                                                font-size: 12px;
+                                                                                                                                                                  overflow-wrap: anywhere;
+                                                                                                                                                                  }
+                                                                                                                                                                  .auth-user.visible { display: block; }
+                                                                                                                                                                  body.fa .auth-dialog,
+                                                                                                                                                                  body.fa .auth-field,
+                                                                                                                                                                  body.fa .auth-status,
+                                                                                                                                                                  body.fa .auth-user { text-align: right; }
+                                                                                                                                                                  body.fa .auth-close { right: auto; left: 15px; }
+                                                                                                                                                                  @media(max-width:720px) {
+                                                                                                                                                                    .auth-open-btn { padding: 8px 10px; }
+                                                                                                                                                                      .auth-dialog { padding: 24px 20px; }
+                                                                                                                                                                      }
+                                                                                                                                                                      
 </style>
 </head>
 
@@ -1214,7 +1333,9 @@ body.fa .trust-item:last-child {
     </ul>
 
     <div class="nav-actions">
-      <button class="language-btn" id="languageBtn" type="button">فارسی</button>
+      <button class="auth-open-btn" id="authOpenBtn" type="button"
+                    data-en="Sign in" data-fa="ورود">Sign in</button>
+                          <button class="language-btn" id="languageBtn" type="button">فارسی</button>
       <button class="menu-btn" id="menuBtn" type="button"
               aria-label="Open menu" aria-expanded="false"
               aria-controls="navLinks">☰</button>
@@ -1836,6 +1957,74 @@ body.fa .trust-item:last-child {
   </div>
 </section>
 
+
+<!-- OPTIONAL ACCOUNT ACCESS -->
+<div class="auth-overlay" id="authOverlay" aria-hidden="true">
+  <section class="auth-dialog" role="dialog" aria-modal="true"
+             aria-labelledby="authTitle">
+             
+    <button class="auth-close" id="authCloseBtn"
+                type="button" aria-label="Close">×</button>
+                
+    <div class="eyebrow"
+             data-en="QUE Soft Account"
+                      data-fa="حساب QUE Soft">QUE Soft Account</div>
+                      
+    <h2 id="authTitle"
+            data-en="Sign in or create an account"
+                    data-fa="ورود یا ساخت حساب">Sign in or create an account</h2>
+                    
+    <p data-en="You can browse the website without signing in. Account access is optional."
+           data-fa="برای دیدن وب‌سایت نیازی به ورود نیست. ساخت حساب و ورود اختیاری است.">
+                 You can browse the website without signing in. Account access is optional.
+                     </p>
+                     
+    <label class="auth-field">
+          <span data-en="Email address" data-fa="نشانی ایمیل">Email address</span>
+                <input id="authEmail" type="email"
+                             autocomplete="email" placeholder="name@example.com">
+                                 </label>
+                                 
+    <label class="auth-field">
+          <span data-en="Password" data-fa="رمز عبور">Password</span>
+                <input id="authPassword" type="password"
+                             autocomplete="current-password"
+                                          minlength="6" placeholder="At least 6 characters">
+                                              </label>
+                                              
+    <div class="auth-actions">
+    
+      <button class="auth-primary" id="emailSignInBtn"
+                    type="button"
+                                  data-en="Sign in with email"
+                                                data-fa="ورود با ایمیل">Sign in with email</button>
+                                                
+      <button class="auth-secondary" id="emailSignUpBtn"
+                    type="button"
+                                  data-en="Create a new account"
+                                                data-fa="ساخت حساب جدید">Create a new account</button>
+                                                
+      <button class="auth-secondary" id="resetPasswordBtn"
+                    type="button"
+                                  data-en="Forgot password?"
+                                                data-fa="رمز عبور را فراموش کرده‌اید؟">Forgot password?</button>
+                                                
+      <button class="auth-google" id="googleSignInBtn"
+                    type="button"
+                                  data-en="Continue with Google"
+                                                data-fa="ادامه با گوگل">Continue with Google</button>
+                                                
+      <button class="auth-secondary" id="signOutBtn"
+                    type="button" style="display:none"
+                                  data-en="Sign out" data-fa="خروج از حساب">Sign out</button>
+                                      </div>
+                                      
+    <div class="auth-user" id="authUser"></div>
+        <div class="auth-status" id="authStatus"
+                 role="status" aria-live="polite"></div>
+                   </section>
+                   </div>
+                   
 </main>
 
 <!-- FOOTER -->
@@ -1981,5 +2170,301 @@ backTop.addEventListener("click", () => {
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+import {
+  getAuth,
+    GoogleAuthProvider,
+      signInWithPopup,
+        signInWithRedirect,
+          signInWithEmailAndPassword,
+            createUserWithEmailAndPassword,
+              sendPasswordResetEmail,
+                onAuthStateChanged,
+                  signOut
+                  } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+                  
+const firebaseConfig = {
+  apiKey: "AIzaSyCxUqcRoW_wT_JhAj30qSGIwqBVc3A3-m4",
+    authDomain: "hisabpro1.firebaseapp.com",
+      projectId: "hisabpro1",
+        storageBucket: "hisabpro1.firebasestorage.app",
+          messagingSenderId: "373006906444",
+            appId: "1:373006906444:web:b50f4d9103dc253a8ef0e9",
+              measurementId: "G-FRDEKLYYZF"
+              };
+              
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({
+  prompt: "select_account"
+  });
+  
+const overlay = document.getElementById("authOverlay");
+const statusBox = document.getElementById("authStatus");
+const userBox = document.getElementById("authUser");
+const signOutBtn = document.getElementById("signOutBtn");
+const openBtn = document.getElementById("authOpenBtn");
+const emailInput = document.getElementById("authEmail");
+const passwordInput = document.getElementById("authPassword");
+
+function say(en, fa) {
+  statusBox.textContent =
+      document.documentElement.lang === "fa" ? fa : en;
+      }
+      
+function openDialog() {
+  overlay.classList.add("open");
+    overlay.setAttribute("aria-hidden", "false");
+      say("", "");
+      }
+      
+function closeDialog() {
+  overlay.classList.remove("open");
+    overlay.setAttribute("aria-hidden", "true");
+    }
+    
+openBtn.addEventListener("click", openDialog);
+
+document.getElementById("authCloseBtn")
+  .addEventListener("click", closeDialog);
+  
+overlay.addEventListener("click", event => {
+  if (event.target === overlay) closeDialog();
+  });
+  
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") closeDialog();
+  });
+  
+function explainError(error) {
+  const code = error && error.code ? error.code : "";
+  
+  const errors = {
+      "auth/invalid-email": [
+            "Email address is not valid.",
+                  "نشانی ایمیل معتبر نیست."
+                      ],
+                          "auth/missing-password": [
+                                "Please enter your password.",
+                                      "لطفاً رمز عبور را وارد کنید."
+                                          ],
+                                              "auth/weak-password": [
+                                                    "Password must contain at least 6 characters.",
+                                                          "رمز عبور باید حداقل ۶ حرف داشته باشد."
+                                                              ],
+                                                                  "auth/email-already-in-use": [
+                                                                        "This email already has an account. Please sign in.",
+                                                                              "این ایمیل قبلاً ثبت شده است. وارد حساب شوید."
+                                                                                  ],
+                                                                                      "auth/invalid-credential": [
+                                                                                            "Email or password is incorrect.",
+                                                                                                  "ایمیل یا رمز عبور اشتباه است."
+                                                                                                      ],
+                                                                                                          "auth/user-not-found": [
+                                                                                                                "No account was found for this email.",
+                                                                                                                      "حسابی با این ایمیل پیدا نشد."
+                                                                                                                          ],
+                                                                                                                              "auth/wrong-password": [
+                                                                                                                                    "Email or password is incorrect.",
+                                                                                                                                          "ایمیل یا رمز عبور اشتباه است."
+                                                                                                                                              ],
+                                                                                                                                                  "auth/popup-closed-by-user": [
+                                                                                                                                                        "Google sign-in was closed before completion.",
+                                                                                                                                                              "پنجره ورود گوگل پیش از تکمیل بسته شد."
+                                                                                                                                                                  ],
+                                                                                                                                                                      "auth/unauthorized-domain": [
+                                                                                                                                                                            "This website domain is not authorized in Firebase.",
+                                                                                                                                                                                  "دامنه سایت در Firebase مجاز نشده است."
+                                                                                                                                                                                      ],
+                                                                                                                                                                                          "auth/network-request-failed": [
+                                                                                                                                                                                                "Network connection failed. Please try again.",
+                                                                                                                                                                                                      "اتصال اینترنت برقرار نشد. دوباره تلاش کنید."
+                                                                                                                                                                                                          ],
+                                                                                                                                                                                                              "auth/too-many-requests": [
+                                                                                                                                                                                                                    "Too many attempts. Please wait and try again.",
+                                                                                                                                                                                                                          "تلاش‌ها بیش از حد بوده است. کمی بعد دوباره تلاش کنید."
+                                                                                                                                                                                                                              ]
+                                                                                                                                                                                                                                };
+                                                                                                                                                                                                                                
+  if (errors[code]) {
+      say(errors[code][0], errors[code][1]);
+        } else {
+            say(
+                  error.message || "Something went wrong.",
+                        error.message || "خطایی رخ داد."
+                            );
+                              }
+                              }
+                              
+/* Email sign in */
+
+document.getElementById("emailSignInBtn")
+  .addEventListener("click", async () => {
+  
+    const email = emailInput.value.trim();
+        const password = passwordInput.value;
+        
+    if (!email || !password) {
+          return say(
+                  "Enter your email and password.",
+                          "ایمیل و رمز عبور را وارد کنید."
+                                );
+                                    }
+                                    
+    say("Signing in...", "در حال ورود...");
+    
+    try {
+          await signInWithEmailAndPassword(auth, email, password);
+                say("Signed in successfully.", "با موفقیت وارد شدید.");
+                    } catch (error) {
+                          explainError(error);
+                              }
+                              });
+                              
+/* Create account */
+
+document.getElementById("emailSignUpBtn")
+  .addEventListener("click", async () => {
+  
+    const email = emailInput.value.trim();
+        const password = passwordInput.value;
+        
+    if (!email || !password) {
+          return say(
+                  "Enter your email and choose a password.",
+                          "ایمیل و رمز عبور دلخواه را وارد کنید."
+                                );
+                                    }
+                                    
+    if (password.length < 6) {
+          return say(
+                  "Password must contain at least 6 characters.",
+                          "رمز عبور باید حداقل ۶ حرف داشته باشد."
+                                );
+                                    }
+                                    
+    say("Creating your account...", "در حال ساخت حساب...");
+    
+    try {
+          await createUserWithEmailAndPassword(auth, email, password);
+                say(
+                        "Your account was created successfully.",
+                                "حساب شما با موفقیت ساخته شد."
+                                      );
+                                          } catch (error) {
+                                                explainError(error);
+                                                    }
+                                                    });
+                                                    
+/* Password recovery */
+
+document.getElementById("resetPasswordBtn")
+  .addEventListener("click", async () => {
+  
+    const email = emailInput.value.trim();
+    
+    if (!email) {
+          return say(
+                  "Enter your email address first.",
+                          "ابتدا نشانی ایمیل خود را وارد کنید."
+                                );
+                                    }
+                                    
+    say(
+          "Sending password reset email...",
+                "در حال ارسال ایمیل بازیابی رمز..."
+                    );
+                    
+    try {
+          await sendPasswordResetEmail(auth, email);
+                say(
+                        "If an account exists for this address, a password reset email has been sent.",
+                                "اگر حسابی با این ایمیل وجود داشته باشد، پیام بازیابی رمز ارسال شده است."
+                                      );
+                                          } catch (error) {
+                                                explainError(error);
+                                                    }
+                                                    });
+                                                    
+/* Google sign in */
+
+document.getElementById("googleSignInBtn")
+  .addEventListener("click", async () => {
+  
+    say("Connecting to Google...", "در حال اتصال به گوگل...");
+    
+    try {
+          await signInWithPopup(auth, googleProvider);
+                say("Signed in with Google.", "با حساب گوگل وارد شدید.");
+                    } catch (error) {
+                    
+      if (
+              error.code === "auth/popup-blocked" ||
+                      error.code === "auth/operation-not-supported-in-this-environment"
+                            ) {
+                                    try {
+                                              await signInWithRedirect(auth, googleProvider);
+                                                      } catch (redirectError) {
+                                                                explainError(redirectError);
+                                                                        }
+                                                                              } else {
+                                                                                      explainError(error);
+                                                                                            }
+                                                                                                }
+                                                                                                });
+                                                                                                
+/* Sign out */
+
+signOutBtn.addEventListener("click", async () => {
+  try {
+      await signOut(auth);
+          say("You have signed out.", "از حساب خارج شدید.");
+            } catch (error) {
+                explainError(error);
+                  }
+                  });
+                  
+/* Account status */
+
+onAuthStateChanged(auth, user => {
+  const isPersian = document.documentElement.lang === "fa";
+  
+  if (user) {
+      userBox.textContent =
+            (isPersian ? "واردشده با: " : "Signed in as: ") +
+                  (user.email || user.displayName || "Google user");
+                  
+    userBox.classList.add("visible");
+        signOutBtn.style.display = "block";
+        
+    openBtn.textContent = isPersian ? "حساب من" : "My account";
+    
+  } else {
+      userBox.textContent = "";
+          userBox.classList.remove("visible");
+              signOutBtn.style.display = "none";
+              
+    openBtn.textContent = isPersian ? "ورود" : "Sign in";
+      }
+      });
+      
+/* Keep account button language in sync */
+
+window.addEventListener("languagechange", () => {
+  const isPersian = document.documentElement.lang === "fa";
+  
+  if (!auth.currentUser) {
+      openBtn.textContent = isPersian ? "ورود" : "Sign in";
+        } else {
+            openBtn.textContent = isPersian ? "حساب من" : "My account";
+              }
+              });
+              </script>
+              
 </body>
 </html>
