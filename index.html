@@ -6,10 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#071426">
 
-<title>QUE Soft | Software Development & Digital Solutions</title>
-
-<meta name="description" content="QUE Soft is an independent software development brand creating Android applications, websites and practical digital solutions. Discover HisabPro.">
-<meta name="keywords" content="QUE Soft, software development, Android apps, web development, HisabPro, Afghanistan software">
+<title>QUE Soft | Independent Software Development</title>
+<meta name="description" content="QUE Soft is an independent software development brand focused on creating practical digital products and useful technology. Discover HisabPro.">
+<meta name="keywords" content="QUE Soft, software development, Android applications, digital products, HisabPro, Afghanistan software">
 <meta name="author" content="QUE Soft">
 <meta name="robots" content="index, follow">
 
@@ -20,14 +19,14 @@
 <link rel="apple-touch-icon" href="quesoft-icon.png">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="QUE Soft | Software Development">
-<meta property="og:description" content="Building useful software and practical digital solutions.">
+<meta property="og:title" content="QUE Soft | Independent Software Development">
+<meta property="og:description" content="Independent software development, practical applications and thoughtful digital products.">
 <meta property="og:url" content="https://quesoft0-arch.github.io/">
 <meta property="og:image" content="https://quesoft0-arch.github.io/quesoft-horizontal.png">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="QUE Soft">
-<meta name="twitter:description" content="Software development and digital solutions.">
+<meta name="twitter:description" content="Independent software development and practical digital products.">
 <meta name="twitter:image" content="https://quesoft0-arch.github.io/quesoft-horizontal.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,7 +41,7 @@
   "url": "https://quesoft0-arch.github.io/",
   "logo": "https://quesoft0-arch.github.io/quesoft-icon.png",
   "email": "quesoft0@gmail.com",
-  "description": "Independent software development brand creating Android applications, websites and digital solutions.",
+  "description": "An independent software development brand focused on creating practical digital products and useful technology.",
   "sameAs": [
     "https://github.com/quesoft0-arch"
   ]
@@ -70,7 +69,6 @@
   --bg: #071426;
   --bg2: #0a1c33;
   --panel: #10243d;
-  --panel2: #132b48;
   --cyan: #35d5dc;
   --blue: #4285ff;
   --text: #f3f7ff;
@@ -500,9 +498,10 @@ header {
   color: var(--cyan);
   background: rgba(53,213,220,.12);
   border-radius: 7px;
+  flex-shrink: 0;
 }
 
-/* Services */
+/* Areas of Focus */
 
 .services-grid {
   display: grid;
@@ -799,6 +798,7 @@ header {
 .faq-question span:last-child {
   color: var(--cyan);
   font-size: 20px;
+  transition: transform .2s;
 }
 
 .faq-answer {
@@ -937,6 +937,10 @@ body.fa .footer-brand,
 body.fa .faq-question,
 body.fa .faq-answer {
   text-align: right;
+}
+
+body.fa .section-heading.center {
+  text-align: center;
 }
 
 body.fa .brand img,
@@ -1203,7 +1207,7 @@ body.fa .trust-item:last-child {
     <ul class="nav-links" id="navLinks">
       <li><a href="#home" data-en="Home" data-fa="خانه">Home</a></li>
       <li><a href="#about" data-en="About" data-fa="درباره ما">About</a></li>
-      <li><a href="#services" data-en="Services" data-fa="خدمات">Services</a></li>
+      <li><a href="#services" data-en="Areas of Focus" data-fa="حوزه‌های فعالیت">Areas of Focus</a></li>
       <li><a href="#products" data-en="Products" data-fa="محصولات">Products</a></li>
       <li><a href="#process" data-en="Our Process" data-fa="روش کار">Our Process</a></li>
       <li><a href="#contact" data-en="Contact" data-fa="تماس">Contact</a></li>
@@ -1211,7 +1215,9 @@ body.fa .trust-item:last-child {
 
     <div class="nav-actions">
       <button class="language-btn" id="languageBtn" type="button">فارسی</button>
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">☰</button>
+      <button class="menu-btn" id="menuBtn" type="button"
+              aria-label="Open menu" aria-expanded="false"
+              aria-controls="navLinks">☰</button>
     </div>
 
   </div>
@@ -1237,9 +1243,9 @@ body.fa .trust-item:last-child {
       </h1>
 
       <p class="hero-description"
-         data-en="QUE Soft creates practical digital solutions, Android applications and websites with a focus on usability, reliability and thoughtful development."
-         data-fa="QUE Soft راهکارهای دیجیتال کاربردی، برنامه‌های اندروید و وب‌سایت‌ها را با تمرکز بر سهولت استفاده، اعتمادپذیری و توسعه اصولی ایجاد می‌کند.">
-        QUE Soft creates practical digital solutions, Android applications and websites with a focus on usability, reliability and thoughtful development.
+         data-en="QUE Soft creates practical digital products and Android applications with a focus on usability, reliability and thoughtful development."
+         data-fa="QUE Soft محصولات دیجیتال کاربردی و برنامه‌های اندروید را با تمرکز بر سهولت استفاده، اعتمادپذیری و توسعه اصولی ایجاد می‌کند.">
+        QUE Soft creates practical digital products and Android applications with a focus on usability, reliability and thoughtful development.
       </p>
 
       <div class="hero-buttons">
@@ -1257,9 +1263,9 @@ body.fa .trust-item:last-child {
       </div>
 
       <p class="hero-note"
-         data-en="Independent development · Practical solutions · Continuous improvement"
-         data-fa="توسعه مستقل · راهکارهای کاربردی · بهبود مستمر">
-        Independent development · Practical solutions · Continuous improvement
+         data-en="Independent development · Practical products · Continuous improvement"
+         data-fa="توسعه مستقل · محصولات کاربردی · بهبود مستمر">
+        Independent development · Practical products · Continuous improvement
       </p>
     </div>
 
@@ -1269,9 +1275,9 @@ body.fa .trust-item:last-child {
       </div>
 
       <div class="floating-tag tag-one"
-           data-en="Digital Solutions"
-           data-fa="راهکارهای دیجیتال">
-        Digital Solutions
+           data-en="Digital Products"
+           data-fa="محصولات دیجیتال">
+        Digital Products
       </div>
 
       <div class="floating-tag tag-two"
@@ -1329,9 +1335,9 @@ body.fa .trust-item:last-child {
         QUE Soft is an independent software development brand focused on creating useful digital products and practical technology solutions.
       </p>
 
-      <p data-en="Our approach is simple: understand the problem, design a practical solution, develop carefully and improve through feedback."
-         data-fa="روش کار ما ساده است: شناخت مشکل، طراحی راهکار کاربردی، توسعه دقیق و بهبود بر اساس بازخورد کاربران.">
-        Our approach is simple: understand the problem, design a practical solution, develop carefully and improve through feedback.
+      <p data-en="Our approach is simple: understand real needs, plan carefully, develop useful products and improve them through learning and feedback."
+         data-fa="روش کار ما ساده است: شناخت نیازهای واقعی، برنامه‌ریزی دقیق، توسعه محصولات کاربردی و بهبود آن‌ها از طریق یادگیری و بازخورد.">
+        Our approach is simple: understand real needs, plan carefully, develop useful products and improve them through learning and feedback.
       </p>
 
       <div class="about-points">
@@ -1360,22 +1366,22 @@ body.fa .trust-item:last-child {
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- AREAS OF FOCUS -->
 
 <section class="section section-alt" id="services">
   <div class="container">
 
     <div class="section-heading center">
-      <div class="eyebrow" data-en="What We Do" data-fa="خدمات ما">What We Do</div>
+      <div class="eyebrow" data-en="Areas of Focus" data-fa="حوزه‌های فعالیت">Areas of Focus</div>
 
-      <h2 data-en="Digital solutions that serve a purpose."
-          data-fa="راهکارهای دیجیتالی که هدف مشخصی دارند.">
-        Digital solutions that serve a purpose.
+      <h2 data-en="The fields behind our digital products."
+          data-fa="حوزه‌هایی که محصولات دیجیتال ما بر آن‌ها متمرکز هستند.">
+        The fields behind our digital products.
       </h2>
 
-      <p data-en="Our development direction is built around useful software, accessible interfaces and dependable digital experiences."
-         data-fa="مسیر توسعه ما بر نرم‌افزارهای مفید، رابط‌های قابل‌دسترس و تجربه‌های دیجیتال قابل‌اعتماد استوار است.">
-        Our development direction is built around useful software, accessible interfaces and dependable digital experiences.
+      <p data-en="These are the main areas of technology and development that shape QUE Soft's own products and ongoing work."
+         data-fa="این‌ها حوزه‌های اصلی فناوری و توسعه هستند که محصولات و فعالیت‌های مستقل QUE Soft بر آن‌ها استوارند.">
+        These are the main areas of technology and development that shape QUE Soft's own products and ongoing work.
       </p>
     </div>
 
@@ -1384,54 +1390,54 @@ body.fa .trust-item:last-child {
       <article class="service-card">
         <div class="service-icon">▣</div>
         <h3 data-en="Android Applications" data-fa="برنامه‌های اندروید">Android Applications</h3>
-        <p data-en="Designing and developing Android applications with practical features, accessible interfaces and attention to user experience."
-           data-fa="طراحی و توسعه برنامه‌های اندروید با امکانات کاربردی، رابط قابل‌استفاده و توجه به تجربه کاربران.">
-          Designing and developing Android applications with practical features, accessible interfaces and attention to user experience.
+        <p data-en="Creating Android products with practical features, accessible interfaces and attention to everyday user needs."
+           data-fa="ساخت محصولات اندرویدی با امکانات کاربردی، رابط قابل‌استفاده و توجه به نیازهای روزمره کاربران.">
+          Creating Android products with practical features, accessible interfaces and attention to everyday user needs.
         </p>
       </article>
 
       <article class="service-card">
         <div class="service-icon">⌘</div>
-        <h3 data-en="Website Development" data-fa="طراحی و توسعه وب‌سایت">Website Development</h3>
-        <p data-en="Creating responsive websites that present brands, products and services clearly across mobile and desktop devices."
-           data-fa="ساخت وب‌سایت‌های واکنش‌گرا برای معرفی روشن برندها، محصولات و خدمات در موبایل و کامپیوتر.">
-          Creating responsive websites that present brands, products and services clearly across mobile and desktop devices.
+        <h3 data-en="Web Technologies" data-fa="فناوری‌های وب">Web Technologies</h3>
+        <p data-en="Using modern web technologies to build and maintain the official digital presence of QUE Soft and its products."
+           data-fa="استفاده از فناوری‌های نوین وب برای ساخت و نگهداری حضور دیجیتال رسمی QUE Soft و محصولات آن.">
+          Using modern web technologies to build and maintain the official digital presence of QUE Soft and its products.
         </p>
       </article>
 
       <article class="service-card">
         <div class="service-icon">◇</div>
         <h3 data-en="Digital Product Design" data-fa="طراحی محصولات دیجیتال">Digital Product Design</h3>
-        <p data-en="Planning clear product structures and user-friendly interfaces before and during development."
-           data-fa="برنامه‌ریزی ساختار روشن محصولات و رابط‌های کاربرپسند پیش از توسعه و در جریان آن.">
-          Planning clear product structures and user-friendly interfaces before and during development.
+        <p data-en="Planning clear product structures and user-friendly interfaces that make digital products easier to understand and use."
+           data-fa="برنامه‌ریزی ساختار روشن محصولات و رابط‌های کاربرپسند برای ساده‌تر شدن درک و استفاده از محصولات دیجیتال.">
+          Planning clear product structures and user-friendly interfaces that make digital products easier to understand and use.
         </p>
       </article>
 
       <article class="service-card">
         <div class="service-icon">⚙</div>
-        <h3 data-en="Software Improvement" data-fa="بهبود نرم‌افزار">Software Improvement</h3>
-        <p data-en="Reviewing existing software, improving usability and addressing development issues."
-           data-fa="بررسی نرم‌افزارهای موجود، بهبود سهولت استفاده و رسیدگی به مشکلات توسعه.">
-          Reviewing existing software, improving usability and addressing development issues.
+        <h3 data-en="Software Engineering" data-fa="مهندسی نرم‌افزار">Software Engineering</h3>
+        <p data-en="Applying structured development practices, testing and careful implementation throughout product development."
+           data-fa="به‌کارگیری روش‌های منظم توسعه، آزمایش و پیاده‌سازی دقیق در جریان ساخت محصولات.">
+          Applying structured development practices, testing and careful implementation throughout product development.
         </p>
       </article>
 
       <article class="service-card">
         <div class="service-icon">◎</div>
-        <h3 data-en="Technical Solutions" data-fa="راهکارهای فنی">Technical Solutions</h3>
-        <p data-en="Exploring suitable technologies and building solutions around project requirements and limitations."
-           data-fa="بررسی فناوری‌های مناسب و ساخت راهکارها بر اساس نیازها و محدودیت‌های هر پروژه.">
-          Exploring suitable technologies and building solutions around project requirements and limitations.
+        <h3 data-en="Technical Research" data-fa="پژوهش فنی">Technical Research</h3>
+        <p data-en="Exploring technologies, tools and approaches that fit the requirements and limitations of each product."
+           data-fa="بررسی فناوری‌ها، ابزارها و روش‌هایی که با نیازها و محدودیت‌های هر محصول سازگار باشند.">
+          Exploring technologies, tools and approaches that fit the requirements and limitations of each product.
         </p>
       </article>
 
       <article class="service-card">
         <div class="service-icon">↗</div>
         <h3 data-en="Product Publishing" data-fa="انتشار محصولات">Product Publishing</h3>
-        <p data-en="Preparing software releases and providing clear product information and download resources."
-           data-fa="آماده‌سازی نسخه‌های نرم‌افزاری و ارائه اطلاعات روشن و منابع دانلود محصولات.">
-          Preparing software releases and providing clear product information and download resources.
+        <p data-en="Preparing official software releases and providing clear product information and download resources."
+           data-fa="آماده‌سازی نسخه‌های رسمی نرم‌افزار و ارائه اطلاعات روشن و منابع دانلود محصولات.">
+          Preparing official software releases and providing clear product information and download resources.
         </p>
       </article>
 
@@ -1586,16 +1592,16 @@ body.fa .trust-item:last-child {
   <div class="container">
 
     <div class="section-heading center">
-      <div class="eyebrow" data-en="How We Work" data-fa="روش کار ما">How We Work</div>
+      <div class="eyebrow" data-en="Our Development Approach" data-fa="رویکرد توسعه ما">Our Development Approach</div>
 
       <h2 data-en="From an idea to a useful product."
           data-fa="از یک ایده تا یک محصول کاربردی.">
         From an idea to a useful product.
       </h2>
 
-      <p data-en="A clear development process helps keep projects focused and organized."
-         data-fa="یک روند توسعه روشن کمک می‌کند پروژه‌ها هدفمند و منظم پیش بروند.">
-        A clear development process helps keep projects focused and organized.
+      <p data-en="A clear development process helps keep product ideas focused, organized and practical."
+         data-fa="یک روند توسعه روشن کمک می‌کند ایده‌های محصولات هدفمند، منظم و کاربردی پیش بروند.">
+        A clear development process helps keep product ideas focused, organized and practical.
       </p>
     </div>
 
@@ -1603,9 +1609,9 @@ body.fa .trust-item:last-child {
 
       <article class="process-card">
         <h3 data-en="Understand" data-fa="شناخت">Understand</h3>
-        <p data-en="Identify the problem, users and project requirements."
-           data-fa="مشکل، کاربران و نیازمندی‌های پروژه را مشخص می‌کنیم.">
-          Identify the problem, users and project requirements.
+        <p data-en="Identify the problem, users and product requirements."
+           data-fa="مشکل، کاربران و نیازمندی‌های محصول را مشخص می‌کنیم.">
+          Identify the problem, users and product requirements.
         </p>
       </article>
 
@@ -1619,9 +1625,9 @@ body.fa .trust-item:last-child {
 
       <article class="process-card">
         <h3 data-en="Develop & Test" data-fa="توسعه و آزمایش">Develop & Test</h3>
-        <p data-en="Build the solution and review its behavior and usability."
-           data-fa="راهکار را می‌سازیم و عملکرد و سهولت استفاده آن را بررسی می‌کنیم.">
-          Build the solution and review its behavior and usability.
+        <p data-en="Build the product and review its behavior and usability."
+           data-fa="محصول را می‌سازیم و عملکرد و سهولت استفاده آن را بررسی می‌کنیم.">
+          Build the product and review its behavior and usability.
         </p>
       </article>
 
@@ -1697,16 +1703,17 @@ body.fa .trust-item:last-child {
         Frequently asked questions.
       </h2>
 
-      <p data-en="Some useful information about QUE Soft and its available product."
-         data-fa="چند پاسخ کاربردی درباره QUE Soft و محصول منتشرشده آن.">
-        Some useful information about QUE Soft and its available product.
+      <p data-en="Useful information about QUE Soft and its available product."
+         data-fa="اطلاعات کاربردی درباره QUE Soft و محصول منتشرشده آن.">
+        Useful information about QUE Soft and its available product.
       </p>
     </div>
 
     <div class="faq-list">
 
       <div class="faq-item">
-        <button class="faq-question" type="button">
+        <button class="faq-question" type="button"
+                aria-expanded="false" aria-controls="faq-answer-1">
           <span data-en="What is QUE Soft?"
                 data-fa="QUE Soft چیست؟">
             What is QUE Soft?
@@ -1714,15 +1721,16 @@ body.fa .trust-item:last-child {
           <span>+</span>
         </button>
 
-        <div class="faq-answer"
-             data-en="QUE Soft is an independent software development brand focused on Android applications, websites and practical digital solutions."
-             data-fa="QUE Soft یک برند مستقل توسعه نرم‌افزار است که بر برنامه‌های اندروید، وب‌سایت‌ها و راهکارهای دیجیتال کاربردی تمرکز دارد.">
-          QUE Soft is an independent software development brand focused on Android applications, websites and practical digital solutions.
+        <div class="faq-answer" id="faq-answer-1"
+             data-en="QUE Soft is an independent software development brand focused on creating its own Android applications and practical digital products."
+             data-fa="QUE Soft یک برند مستقل توسعه نرم‌افزار است که بر ساخت برنامه‌های اندروید و محصولات دیجیتال کاربردی خود تمرکز دارد.">
+          QUE Soft is an independent software development brand focused on creating its own Android applications and practical digital products.
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" type="button">
+        <button class="faq-question" type="button"
+                aria-expanded="false" aria-controls="faq-answer-2">
           <span data-en="Which product is currently available?"
                 data-fa="در حال حاضر کدام محصول در دسترس است؟">
             Which product is currently available?
@@ -1730,7 +1738,7 @@ body.fa .trust-item:last-child {
           <span>+</span>
         </button>
 
-        <div class="faq-answer"
+        <div class="faq-answer" id="faq-answer-2"
              data-en="HisabPro for Android is currently listed as an available product. Its official release page contains the download and version information."
              data-fa="در حال حاضر برنامه HisabPro برای اندروید به‌عنوان محصول در دسترس معرفی شده است. صفحه رسمی انتشار آن شامل لینک دانلود و اطلاعات نسخه است.">
           HisabPro for Android is currently listed as an available product. Its official release page contains the download and version information.
@@ -1738,7 +1746,8 @@ body.fa .trust-item:last-child {
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" type="button">
+        <button class="faq-question" type="button"
+                aria-expanded="false" aria-controls="faq-answer-3">
           <span data-en="Where can I download HisabPro?"
                 data-fa="از کجا می‌توانم HisabPro را دانلود کنم؟">
             Where can I download HisabPro?
@@ -1746,7 +1755,7 @@ body.fa .trust-item:last-child {
           <span>+</span>
         </button>
 
-        <div class="faq-answer"
+        <div class="faq-answer" id="faq-answer-3"
              data-en="Use the official GitHub release page or the direct APK download link in the HisabPro section of this website."
              data-fa="از صفحه رسمی انتشار در GitHub یا لینک مستقیم APK در بخش HisabPro همین وب‌سایت استفاده کنید.">
           Use the official GitHub release page or the direct APK download link in the HisabPro section of this website.
@@ -1754,7 +1763,25 @@ body.fa .trust-item:last-child {
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" type="button">
+        <button class="faq-question" type="button"
+                aria-expanded="false" aria-controls="faq-answer-4">
+          <span data-en="Does QUE Soft accept products from other developers?"
+                data-fa="آیا QUE Soft محصولات توسعه‌دهندگان دیگر را می‌پذیرد؟">
+            Does QUE Soft accept products from other developers?
+          </span>
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer" id="faq-answer-4"
+             data-en="No. This website is dedicated to the official brand and products developed under QUE Soft."
+             data-fa="خیر. این وب‌سایت به برند رسمی QUE Soft و محصولاتی اختصاص دارد که تحت این برند توسعه یافته‌اند.">
+          No. This website is dedicated to the official brand and products developed under QUE Soft.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button"
+                aria-expanded="false" aria-controls="faq-answer-5">
           <span data-en="How can I contact QUE Soft?"
                 data-fa="چگونه با QUE Soft تماس بگیرم؟">
             How can I contact QUE Soft?
@@ -1762,26 +1789,10 @@ body.fa .trust-item:last-child {
           <span>+</span>
         </button>
 
-        <div class="faq-answer"
-             data-en="You can use the contact email address listed on this website."
-             data-fa="می‌توانید از نشانی ایمیلی که در این وب‌سایت درج شده است استفاده کنید.">
-          You can use the contact email address listed on this website.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" type="button">
-          <span data-en="Does QUE Soft publish updates?"
-                data-fa="آیا QUE Soft نسخه‌های جدید منتشر می‌کند؟">
-            Does QUE Soft publish updates?
-          </span>
-          <span>+</span>
-        </button>
-
-        <div class="faq-answer"
-             data-en="Official product releases and available version information are provided through the relevant release pages."
-             data-fa="نسخه‌های رسمی و اطلاعات نسخه‌های در دسترس از طریق صفحات انتشار مربوطه ارائه می‌شوند.">
-          Official product releases and available version information are provided through the relevant release pages.
+        <div class="faq-answer" id="faq-answer-5"
+             data-en="You can use the contact email address listed on this website for questions and feedback."
+             data-fa="برای پرسش‌ها و ارائه پیشنهادها می‌توانید از نشانی ایمیل درج‌شده در این وب‌سایت استفاده کنید.">
+          You can use the contact email address listed on this website for questions and feedback.
         </div>
       </div>
 
@@ -1798,14 +1809,14 @@ body.fa .trust-item:last-child {
       <div>
         <div class="eyebrow" data-en="Get in Touch" data-fa="ارتباط با ما">Get in Touch</div>
 
-        <h2 data-en="Have a question or an idea?"
-            data-fa="سؤال یا ایده‌ای دارید؟">
-          Have a question or an idea?
+        <h2 data-en="Have a question or feedback?"
+            data-fa="سؤال یا پیشنهادی دارید؟">
+          Have a question or feedback?
         </h2>
 
-        <p data-en="For questions, feedback or business inquiries, you can contact QUE Soft through the email address below."
-           data-fa="برای پرسش‌ها، پیشنهادها یا ارتباطات کاری می‌توانید از طریق نشانی ایمیل زیر با QUE Soft تماس بگیرید.">
-          For questions, feedback or business inquiries, you can contact QUE Soft through the email address below.
+        <p data-en="For questions, suggestions or feedback about QUE Soft and its products, you can use the contact email address below."
+           data-fa="برای پرسش‌ها، پیشنهادها یا ارائه بازخورد درباره QUE Soft و محصولات آن می‌توانید از نشانی ایمیل زیر استفاده کنید.">
+          For questions, suggestions or feedback about QUE Soft and its products, you can use the contact email address below.
         </p>
       </div>
 
@@ -1837,16 +1848,16 @@ body.fa .trust-item:last-child {
       <div class="footer-brand">
         <img src="quesoft-horizontal.png" alt="QUE Soft">
 
-        <p data-en="Independent software development. Practical applications. Thoughtful digital solutions."
-           data-fa="توسعه مستقل نرم‌افزار، برنامه‌های کاربردی و راهکارهای دیجیتال سنجیده.">
-          Independent software development. Practical applications. Thoughtful digital solutions.
+        <p data-en="Independent software development. Practical applications. Thoughtful digital products."
+           data-fa="توسعه مستقل نرم‌افزار، برنامه‌های کاربردی و محصولات دیجیتال سنجیده.">
+          Independent software development. Practical applications. Thoughtful digital products.
         </p>
       </div>
 
       <div class="footer-column">
         <h3 data-en="Explore" data-fa="دسترسی سریع">Explore</h3>
         <a href="#about" data-en="About Us" data-fa="درباره ما">About Us</a>
-        <a href="#services" data-en="Services" data-fa="خدمات">Services</a>
+        <a href="#services" data-en="Areas of Focus" data-fa="حوزه‌های فعالیت">Areas of Focus</a>
         <a href="#products" data-en="Our Product" data-fa="محصول ما">Our Product</a>
         <a href="#updates" data-en="Updates" data-fa="به‌روزرسانی‌ها">Updates</a>
         <a href="#contact" data-en="Contact" data-fa="تماس">Contact</a>
@@ -1875,7 +1886,8 @@ body.fa .trust-item:last-child {
   </div>
 </footer>
 
-<button class="back-top" id="backTop" type="button" aria-label="Back to top">↑</button>
+<button class="back-top" id="backTop" type="button"
+        aria-label="Back to top">↑</button>
 
 <script>
 /* Language */
@@ -1919,16 +1931,23 @@ try {
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
+function closeMenu() {
+  navLinks.classList.remove("open");
+  menuBtn.textContent = "☰";
+  menuBtn.setAttribute("aria-expanded", "false");
+  menuBtn.setAttribute("aria-label", "Open menu");
+}
+
 menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-  menuBtn.textContent = navLinks.classList.contains("open") ? "✕" : "☰";
+  const isOpen = navLinks.classList.toggle("open");
+
+  menuBtn.textContent = isOpen ? "✕" : "☰";
+  menuBtn.setAttribute("aria-expanded", String(isOpen));
+  menuBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
 });
 
 document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuBtn.textContent = "☰";
-  });
+  link.addEventListener("click", closeMenu);
 });
 
 /* FAQ */
@@ -1936,7 +1955,9 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 document.querySelectorAll(".faq-question").forEach(button => {
   button.addEventListener("click", () => {
     const item = button.closest(".faq-item");
-    item.classList.toggle("active");
+    const isOpen = item.classList.toggle("active");
+
+    button.setAttribute("aria-expanded", String(isOpen));
   });
 });
 
