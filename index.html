@@ -459,9 +459,11 @@ header {
 }
 
 .about-visual img {
-  width: 100%;
-  max-width: 330px;
+  width: min(100%, 420px);
+  max-width: 420px;
+  max-height: 145px;
   object-fit: contain;
+  display: block;
 }
 
 .about-copy h2 {
@@ -1585,7 +1587,10 @@ body.fa .nav-links a:focus-visible::after { right: 0; }
   <div class="container about-grid">
 
     <div class="about-visual">
-      <img src="quesoft-icon.png" alt="QUE Soft icon">
+      <img src="https://quesoft0-arch.github.io/quesoft-horizontal.png"
+           alt="QUE Soft horizontal logo"
+           loading="eager"
+           decoding="async">
     </div>
 
     <div class="about-copy">
